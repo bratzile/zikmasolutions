@@ -166,6 +166,126 @@ export const portfolioProjects = [
 export const blogPosts = [
   {
     id: 1,
+    title: 'Top 10 Web Development Trendova za 2026. Godinu',
+    slug: 'top-10-web-development-trendova-2026',
+    excerpt: 'AI, WebAssembly, Edge Computing - otkrijte najvažnije tehnologije koje će dominirati web developmentom u 2026. godini.',
+    category: 'Web Development',
+    author: 'Marko Simić',
+    date: '2026-01-15',
+    image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800',
+    readTime: '12 min',
+    featured: true
+  },
+  {
+    id: 2,
+    title: 'Najboljih 5 SEO Strategija za 2026: Google Core Update',
+    slug: 'najboljih-5-seo-strategija-2026',
+    excerpt: 'Google je promenio sve! Saznajte koje SEO strategije zaista funkcionišu u 2026. i kako optimizovati sajt za AI pretragu.',
+    category: 'SEO',
+    author: 'Ana Jovanović',
+    date: '2026-01-12',
+    image: 'https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?w=800',
+    readTime: '10 min',
+    featured: true
+  },
+  {
+    id: 3,
+    title: 'Top 7 Marketing Ideja za Mala Preduzeća u 2026',
+    slug: 'top-7-marketing-ideja-2026',
+    excerpt: 'Budžet nije problem! Evo najboljih marketing strategija koje male firme mogu primeniti sa minimalnim ulaganjima u 2026.',
+    category: 'Digitalni Marketing',
+    author: 'Nikola Petrović',
+    date: '2026-01-10',
+    image: 'https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=800',
+    readTime: '9 min',
+    featured: true
+  },
+  {
+    id: 4,
+    title: '10 Najvažnijih Web Dizajn Principa za 2026',
+    slug: '10-web-dizajn-principa-2026',
+    excerpt: 'Minimalizam je out! Evo top 10 dizajn principa koji će definisati moderne web sajtove u 2026: neumorfizam, glassmorphism i više.',
+    category: 'Web Development',
+    author: 'Marko Simić',
+    date: '2026-01-08',
+    image: 'https://images.unsplash.com/photo-1558655146-d09347e92766?w=800',
+    readTime: '11 min',
+    featured: false
+  },
+  {
+    id: 5,
+    title: 'WordPress u 2026: Top 5 Plugina Koje MORATE Imati',
+    slug: 'wordpress-top-5-plugina-2026',
+    excerpt: 'WordPress evolucija nastavlja! Saznajte koje plugine koriste najuspešniji sajtovi u 2026. za brzinu, sigurnost i SEO.',
+    category: 'Web Development',
+    author: 'Ana Jovanović',
+    date: '2026-01-06',
+    image: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800',
+    readTime: '8 min',
+    featured: false
+  },
+  {
+    id: 6,
+    title: '5 AI Alata za Digitalni Marketing Koji Menjaju Igru 2026',
+    slug: '5-ai-alata-digitalni-marketing-2026',
+    excerpt: 'ChatGPT je samo početak! Otkrijte 5 AI alata koji automatizuju kampanje, kreiraju sadržaj i povećavaju konverzije u 2026.',
+    category: 'Digitalni Marketing',
+    author: 'Nikola Petrović',
+    date: '2026-01-04',
+    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800',
+    readTime: '10 min',
+    featured: true
+  },
+  {
+    id: 7,
+    title: 'Top 10 E-commerce Trendova za Online Prodavnice 2026',
+    slug: 'top-10-ecommerce-trendova-2026',
+    excerpt: 'AR shopping, voice commerce, sustainable e-commerce - sve što morate znati o online prodaji u 2026. godini.',
+    category: 'E-commerce',
+    author: 'Marko Simić',
+    date: '2026-01-02',
+    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800',
+    readTime: '13 min',
+    featured: false
+  },
+  {
+    id: 8,
+    title: 'Najbolje Social Media Platforme za Biznis u 2026',
+    slug: 'najbolje-social-media-platforme-2026',
+    excerpt: 'TikTok, LinkedIn, novi igrači - koje društvene mreže donose najbolji ROI za srpske kompanije u 2026?',
+    category: 'Digitalni Marketing',
+    author: 'Ana Jovanović',
+    date: '2025-12-30',
+    image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800',
+    readTime: '9 min',
+    featured: false
+  },
+  {
+    id: 9,
+    title: '7 Načina Kako AI Transformiše Web Development u 2026',
+    slug: '7-nacina-ai-transformise-web-development-2026',
+    excerpt: 'AI coding asistenti, automatsko testiranje, dizajn generatori - kako AI menja način razvoja web aplikacija.',
+    category: 'Web Development',
+    author: 'Nikola Petrović',
+    date: '2025-12-28',
+    image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800',
+    readTime: '11 min',
+    featured: false
+  },
+  {
+    id: 10,
+    title: 'Top 5 SaaS Business Model Strategija za Startupove 2026',
+    slug: 'top-5-saas-strategija-2026',
+    excerpt: 'Freemium, usage-based pricing, hybrid modeli - koje SaaS strategije donose najveći profit u 2026?',
+    category: 'Web Development',
+    author: 'Marko Simić',
+    date: '2025-12-26',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800',
+    readTime: '10 min',
+    featured: false
+  },
+  {
+    id: 11,
     title: 'Kako odabrati pravu platformu za web sajt u 2025?',
     slug: 'odabir-platforme-web-sajt-2025',
     excerpt: 'WordPress, custom development ili website builderi? Detaljno poređenje svih opcija sa prednostima i manama za vaš biznis.',
@@ -174,10 +294,10 @@ export const blogPosts = [
     date: '2025-01-15',
     image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800',
     readTime: '8 min',
-    featured: true
+    featured: false
   },
   {
-    id: 2,
+    id: 12,
     title: 'SEO Checklist za 2025: Kompletna optimizacija',
     slug: 'seo-checklist-2025',
     excerpt: 'Sve što treba da uradite da vaš sajt rangira na prvoj strani Google-a. Proveren SEO vodič sa konkretnim koracima.',
@@ -186,10 +306,10 @@ export const blogPosts = [
     date: '2025-01-10',
     image: 'https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?w=800',
     readTime: '12 min',
-    featured: true
+    featured: false
   },
   {
-    id: 3,
+    id: 13,
     title: 'WordPress vs Custom Development: Šta je bolje?',
     slug: 'wordpress-vs-custom-development',
     excerpt: 'Kada koristiti WordPress, a kada custom rešenje? Analiziramo troškove, performanse i fleksibilnost oba pristupa.',
@@ -201,7 +321,7 @@ export const blogPosts = [
     featured: false
   },
   {
-    id: 4,
+    id: 14,
     title: 'Kako pokrenuti uspešnu online prodavnicu?',
     slug: 'uspesna-online-prodavnica',
     excerpt: 'Vodič kroz proces pokretanja e-commerce sajta: od izbora platforme do prvih prodaja.',
@@ -210,10 +330,10 @@ export const blogPosts = [
     date: '2024-12-28',
     image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800',
     readTime: '15 min',
-    featured: true
+    featured: false
   },
   {
-    id: 5,
+    id: 15,
     title: 'Google Ads za početnike: Sve što treba da znate',
     slug: 'google-ads-za-pocetnike',
     excerpt: 'Kompletni vodič kroz Google Ads kampanje. Kako kreirati, optimizovati i meriti uspeh vaših oglasa.',
@@ -225,7 +345,7 @@ export const blogPosts = [
     featured: false
   },
   {
-    id: 6,
+    id: 16,
     title: 'Web performanse: Kako ubrzati vaš sajt?',
     slug: 'ubrzanje-web-sajta',
     excerpt: 'Tehnike optimizacije koje će vaš sajt učiniti bržim i poboljšati korisničko iskustvo i SEO.',
