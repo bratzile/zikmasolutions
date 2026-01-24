@@ -102,6 +102,19 @@ export const services = [
 export const portfolioProjects = [
   {
     id: 1,
+    title: 'Belkom Liftovi - SaaS za upravljanje održavanjem',
+    client: 'Belkom Liftovi',
+    slug: 'belkom-liftovi-saas',
+    category: 'SaaS',
+    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800',
+    description: 'Kompletan SaaS sistem za upravljanje radnim nalozima, praćenje radnika, čuvanje dokumentacije sa terena.',
+    technologies: ['React', 'Node.js', 'MongoDB', 'Cloud Storage', 'Mobile Responsive'],
+    results: 'Automatizacija 80% administrativnih procesa',
+    year: '2024',
+    website: 'https://evo.belkomliftovi.com'
+  },
+  {
+    id: 2,
     title: 'E-commerce rešenje za modni brend',
     client: 'Fashion Boutique',
     slug: 'ecommerce-modni-brend',
@@ -113,7 +126,7 @@ export const portfolioProjects = [
     year: '2024'
   },
   {
-    id: 2,
+    id: 3,
     title: 'Web aplikacija za upravljanje projektima',
     client: 'Tech Startup',
     slug: 'web-app-projekti',
@@ -125,7 +138,7 @@ export const portfolioProjects = [
     year: '2024'
   },
   {
-    id: 3,
+    id: 4,
     title: 'Korporativni sajt sa multi-jezik podrškom',
     client: 'International Corporation',
     slug: 'korporativni-sajt',
@@ -137,7 +150,7 @@ export const portfolioProjects = [
     year: '2023'
   },
   {
-    id: 4,
+    id: 5,
     title: 'Restaurant booking sistem',
     client: 'Restaurant Group',
     slug: 'restaurant-booking',
