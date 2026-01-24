@@ -26,6 +26,7 @@ function App() {
           <Route path="/usluge" element={<Services />} />
           <Route path="/usluge/:slug" element={<ServiceDetail />} />
           <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/portfolio/:slug" element={<PortfolioDetail />} />
           <Route path="/o-nama" element={<About />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
