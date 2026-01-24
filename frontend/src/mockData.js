@@ -38,16 +38,16 @@ export const services = [
     keywords: ['woocommerce srbija', 'prestashop development', 'online prodavnica', 'e-commerce sajt', 'web shop izrada']
   },
   {
-    id: 'web-apps',
-    title: 'Web Aplikacije Po Meri',
-    slug: 'web-aplikacije-po-meri',
-    shortDesc: 'Razvoj kompleksnih web aplikacija prilagođenih specifičnim poslovnim potrebama.',
+    id: 'saas-development',
+    title: 'SaaS Razvoj',
+    slug: 'saas-razvoj',
+    shortDesc: 'Razvoj SaaS platformi koje olakšavaju poslovanje - od ideje do lansiranja kompletnog rešenja.',
     icon: 'Code',
     color: '#28A745',
     featured: true,
-    metaTitle: 'Web Aplikacije Po Meri | Custom Web Development',
-    metaDescription: 'Razvoj web aplikacija po meri za vaš biznis. React, Node.js, Python. Skalabilna i sigurna rešenja. 💻 Konsultacije besplatne!',
-    keywords: ['web aplikacije', 'custom web development', 'aplikacije po meri', 'saas development', 'web app srbija']
+    metaTitle: 'SaaS Razvoj | Software as a Service - Custom Platforme',
+    metaDescription: 'Razvoj SaaS aplikacija za različite industrije. Skalabilne cloud platforme, subscription modeli, automatizacija procesa. 💻 Konsultacije besplatne!',
+    keywords: ['saas development srbija', 'software as a service', 'cloud aplikacije', 'saas platform', 'subscription software', 'web app po meri']
   },
   {
     id: 'seo',
