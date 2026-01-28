@@ -12,6 +12,7 @@ const NewHeader = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [megaMenuOpen, setMegaMenuOpen] = useState(false);
+  const [activeCategory, setActiveCategory] = useState(serviceCategories[0].id);
   const location = useLocation();
 
   useEffect(() => {
