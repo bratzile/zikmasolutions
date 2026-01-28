@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
+import { serviceCategories } from '../newMockData';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -9,13 +10,15 @@ const Footer = () => {
     <footer className="bg-[#0a0c0f] border-t border-[#28A745]/20">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
-          <div>
+          <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-[#28A745] to-[#1E7E34] rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">ZS</span>
-              </div>
+              <img 
+                src="https://customer-assets.emergentagent.com/job_zikma-seo-portal/artifacts/l3nxnhy7_ZS.png" 
+                alt="Zikma Solutions" 
+                className="w-10 h-10 rounded-lg"
+              />
               <span className="text-white font-bold text-lg">Zikma Solutions</span>
             </div>
             <p className="text-gray-400 text-sm mb-4">
@@ -69,35 +72,19 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Services */}
+          {/* Popularne usluge */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Usluge</h3>
+            <h3 className="text-white font-semibold mb-4">Popularne Usluge</h3>
             <ul className="space-y-2">
-              <li>
-                <Link to="/usluge/izrada-web-sajtova" className="text-gray-400 hover:text-[#28A745] transition-colors text-sm">
-                  Izrada Web Sajtova
-                </Link>
-              </li>
-              <li>
-                <Link to="/usluge/wordpress-development" className="text-gray-400 hover:text-[#28A745] transition-colors text-sm">
-                  WordPress Development
-                </Link>
-              </li>
-              <li>
-                <Link to="/usluge/seo-optimizacija" className="text-gray-400 hover:text-[#28A745] transition-colors text-sm">
-                  SEO Optimizacija
-                </Link>
-              </li>
-              <li>
-                <Link to="/usluge/digitalni-marketing" className="text-gray-400 hover:text-[#28A745] transition-colors text-sm">
-                  Digitalni Marketing
-                </Link>
-              </li>
-              <li>
-                <Link to="/usluge/web-aplikacije-po-meri" className="text-gray-400 hover:text-[#28A745] transition-colors text-sm">
-                  Web Aplikacije
-                </Link>
-              </li>
+              {serviceCategories.slice(0, 3).map(cat => (
+                cat.services.slice(0, 2).map(service => (
+                  <li key={service.id}>
+                    <Link to={service.fullPath} className="text-gray-400 hover:text-[#28A745] transition-colors text-sm">
+                      {service.title}
+                    </Link>
+                  </li>
+                ))
+              ))}
             </ul>
           </div>
 
