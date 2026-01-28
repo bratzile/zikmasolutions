@@ -99,51 +99,105 @@ const NewHeader = () => {
         </div>
       </div>
 
-      {/* Mega Menu Dropdown */}
+      {/* Mega Menu Dropdown - FULL WIDTH */}
       {megaMenuOpen && (
         <div
-          className="hidden lg:block absolute left-0 right-0 bg-[#0f1419]/98 backdrop-blur-md border-t border-[#28A745]/20 shadow-2xl"
+          className="hidden lg:block fixed left-0 right-0 top-20 bg-[#0a0c0f]/98 backdrop-blur-xl border-t border-[#28A745]/20 shadow-2xl"
           onMouseLeave={() => setMegaMenuOpen(false)}
+          style={{ maxHeight: 'calc(100vh - 5rem)', overflowY: 'auto' }}
         >
           <div className="container mx-auto px-4 py-8">
-            <div className="grid grid-cols-3 gap-8">
-              {serviceCategories.map((category) => {
-                const IconComponent = iconMap[category.icon];
-                return (
-                  <div key={category.id} className="space-y-4">
-                    <div className="flex items-center space-x-3 mb-4">
-                      <div className="w-10 h-10 bg-gradient-to-br from-[#28A745] to-[#1E7E34] rounded-lg flex items-center justify-center">
-                        {IconComponent && <IconComponent size={20} className="text-white" />}
+            <div className="grid grid-cols-4 gap-8">
+              {/* LEFT SIDEBAR - Category Names */}
+              <div className="col-span-1 space-y-2 border-r border-[#28A745]/20 pr-6">
+                {serviceCategories.map((category) => {
+                  const IconComponent = iconMap[category.icon];
+                  const isActive = activeCategory === category.id;
+                  return (
+                    <button
+                      key={category.id}
+                      onMouseEnter={() => setActiveCategory(category.id)}
+                      onClick={() => setActiveCategory(category.id)}
+                      className={`w-full flex items-center space-x-3 p-4 rounded-xl transition-all duration-300 ${
+                        isActive 
+                          ? 'bg-gradient-to-r from-[#28A745] to-[#1E7E34] shadow-lg' 
+                          : 'hover:bg-[#1a2332]/50'
+                      }`}
+                    >
+                      <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${
+                        isActive ? 'bg-white/20' : 'bg-[#28A745]/20'
+                      }`}>
+                        {IconComponent && <IconComponent size={20} className={isActive ? 'text-white' : 'text-[#28A745]'} />}
                       </div>
-                      <div>
-                        <h3 className="text-white font-bold text-lg">{category.name}</h3>
-                        <p className="text-gray-400 text-xs">{category.description}</p>
+                      <div className="text-left">
+                        <h3 className={`font-bold text-sm ${isActive ? 'text-white' : 'text-gray-300'}`}>
+                          {category.name}
+                        </h3>
+                        <p className={`text-xs ${isActive ? 'text-white/80' : 'text-gray-500'}`}>
+                          {category.services.length} usluga
+                        </p>
                       </div>
-                    </div>
-                    <div className="space-y-2">
-                      {category.services.map((service) => (
-                        <Link
-                          key={service.id}
-                          to={service.fullPath}
-                          className="block text-gray-300 hover:text-[#28A745] transition-colors text-sm py-2 px-3 rounded hover:bg-[#28A745]/10"
+                    </button>
+                  );
+                })}
+              </div>
+
+              {/* RIGHT CONTENT - Services List */}
+              <div className="col-span-3">
+                {serviceCategories.map((category) => {
+                  if (category.id !== activeCategory) return null;
+                  return (
+                    <div key={category.id} className="animate-in fade-in slide-in-from-right duration-300">
+                      {/* Category Header */}
+                      <div className="mb-6">
+                        <h2 className="text-3xl font-bold text-white mb-2 font-poppins">{category.name}</h2>
+                        <p className="text-gray-400">{category.description}</p>
+                      </div>
+
+                      {/* Services Grid */}
+                      <div className="grid grid-cols-2 gap-4">
+                        {category.services.map((service, idx) => (
+                          <Link
+                            key={service.id}
+                            to={service.fullPath}
+                            onClick={() => setMegaMenuOpen(false)}
+                            className="group p-4 rounded-xl bg-[#1a2332]/30 border border-[#28A745]/10 hover:border-[#28A745] hover:bg-[#1a2332]/50 transition-all duration-300"
+                          >
+                            <div className="flex items-start space-x-3">
+                              <div 
+                                className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform"
+                                style={{ backgroundColor: `${service.color}20` }}
+                              >
+                                <div className="w-6 h-6 bg-gradient-to-br from-[#28A745] to-[#1E7E34] rounded-md"></div>
+                              </div>
+                              <div className="flex-1">
+                                <h4 className="text-white font-semibold text-sm mb-1 group-hover:text-[#28A745] transition-colors">
+                                  {service.title}
+                                </h4>
+                                <p className="text-gray-400 text-xs leading-relaxed line-clamp-2">
+                                  {service.shortDesc}
+                                </p>
+                              </div>
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
+
+                      {/* View All Link */}
+                      <div className="mt-6 pt-6 border-t border-[#28A745]/20">
+                        <Link 
+                          to="/usluge" 
+                          className="inline-flex items-center text-[#28A745] hover:text-[#34D058] font-medium"
                           onClick={() => setMegaMenuOpen(false)}
                         >
-                          {service.title}
+                          Pogledajte sve usluge
+                          <ArrowRight size={18} className="ml-2" />
                         </Link>
-                      ))}
+                      </div>
                     </div>
-                  </div>
-                );
-              })}
-            </div>
-            <div className="mt-6 pt-6 border-t border-[#28A745]/20 text-center">
-              <Link 
-                to="/usluge" 
-                className="text-[#28A745] hover:text-[#34D058] font-medium"
-                onClick={() => setMegaMenuOpen(false)}
-              >
-                Pogledajte sve usluge →
-              </Link>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>
