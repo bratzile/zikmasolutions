@@ -32,7 +32,7 @@ function App() {
       <BrowserRouter>
         <NewHeader />
         <Routes>
-          <Route path="/" element={<NewHome />} />
+          <Route path="/" element={<FinalHome />} />
           <Route path="/usluge" element={<AllServices />} />
           
           {/* Web Sajtovi */}
