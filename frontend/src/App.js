@@ -8,7 +8,7 @@ import { Toaster } from "./components/ui/sonner";
 import AOS from 'aos';
 
 // Pages
-import NewHome from "./pages/NewHome";
+import FinalHome from "./pages/FinalHome";
 import AllServices from "./pages/AllServices";
 import Portfolio from "./pages/Portfolio";
 import PortfolioDetail from "./pages/PortfolioDetail";
