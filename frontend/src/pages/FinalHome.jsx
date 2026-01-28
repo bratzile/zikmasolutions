@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Zap, Users, Award, Globe, ShoppingCart, Code, TrendingUp, Megaphone, Palette, Server, Sparkles, Brain, Target, ExternalLink } from 'lucide-react';
+import { ArrowRight, CheckCircle, Zap, Users, Award, Globe, ShoppingCart, Code, TrendingUp, Megaphone, Palette, Server, Sparkles, Brain, Target, ExternalLink, Rocket } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
 import { serviceCategories, portfolioProjects, testimonials, stats } from '../newMockData';
