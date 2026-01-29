@@ -28,6 +28,7 @@ import IzradaCustomProdavnice from "./pages/IzradaCustomProdavnice";
 import PrestaShopDevelopment from "./pages/PrestaShopDevelopment";
 import PrestaShopOdrzavanje from "./pages/PrestaShopOdrzavanje";
 import WooCommerceDevelopment from "./pages/WooCommerceDevelopment";
+import WebAplikacije from "./pages/WebAplikacije";
 
 function App() {
   useEffect(() => {
@@ -62,6 +63,9 @@ function App() {
           <Route path="/e-commerce/prestashop-development" element={<PrestaShopDevelopment />} />
           <Route path="/e-commerce/prestashop-odrzavanje" element={<PrestaShopOdrzavanje />} />
           <Route path="/e-commerce/woocommerce-development" element={<WooCommerceDevelopment />} />
+          
+          {/* Razvoj Softvera - SEO Optimized */}
+          <Route path="/razvoj-softvera/web-aplikacije" element={<WebAplikacije />} />
           <Route path="/web-sajtovi/redizajn-sajta" element={<ServicePage />} />
           <Route path="/web-sajtovi/odrzavanje-sajta" element={<ServicePage />} />
           <Route path="/web-sajtovi/izrada-wordpress-sajta" element={<ServicePage />} />
