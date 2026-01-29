@@ -34,6 +34,7 @@ import SaaSResenja from "./pages/SaaSResenja";
 import PoslovneAplikacije from "./pages/PoslovneAplikacije";
 import AutomatizacijaProcesa from "./pages/AutomatizacijaProcesa";
 import AIAgenti from "./pages/AIAgenti";
+import SEOOptimizacija from "./pages/SEOOptimizacija";
 
 function App() {
   useEffect(() => {
