@@ -31,6 +31,7 @@ import WooCommerceDevelopment from "./pages/WooCommerceDevelopment";
 import WebAplikacije from "./pages/WebAplikacije";
 import MobilneAplikacije from "./pages/MobilneAplikacije";
 import SaaSResenja from "./pages/SaaSResenja";
+import PoslovneAplikacije from "./pages/PoslovneAplikacije";
 
 function App() {
   useEffect(() => {
