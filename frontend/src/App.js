@@ -118,6 +118,7 @@ function App() {
           <Route path="/kontakt" element={<Contact />} />
         </Routes>
         <Footer />
+        <CookieBanner />
         <Toaster />
       </BrowserRouter>
     </div>
