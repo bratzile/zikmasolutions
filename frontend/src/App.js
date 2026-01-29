@@ -102,6 +102,9 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/kontakt" element={<Contact />} />
+          
+          {/* 404 - Catch all */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
         <CookieBanner />
