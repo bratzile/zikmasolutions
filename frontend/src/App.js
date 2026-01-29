@@ -83,21 +83,6 @@ function App() {
           <Route path="/razvoj-softvera/poslovne-aplikacije" element={<PoslovneAplikacije />} />
           <Route path="/razvoj-softvera/automatizacija-procesa" element={<AutomatizacijaProcesa />} />
           <Route path="/razvoj-softvera/ai-agenti" element={<AIAgenti />} />
-          <Route path="/web-sajtovi/redizajn-sajta" element={<ServicePage />} />
-          <Route path="/web-sajtovi/odrzavanje-sajta" element={<ServicePage />} />
-          <Route path="/web-sajtovi/izrada-wordpress-sajta" element={<ServicePage />} />
-          <Route path="/web-sajtovi/wordpress-development" element={<ServicePage />} />
-          <Route path="/web-sajtovi/wordpress-odrzavanje" element={<ServicePage />} />
-          
-          {/* E-commerce */}
-          <Route path="/e-commerce/izrada-prestashop-prodavnice" element={<ServicePage />} />
-          <Route path="/e-commerce/izrada-woocommerce-prodavnice" element={<ServicePage />} />
-          <Route path="/e-commerce/izrada-custom-prodavnice" element={<ServicePage />} />
-          <Route path="/e-commerce/prestashop-development" element={<ServicePage />} />
-          <Route path="/e-commerce/prestashop-odrzavanje" element={<ServicePage />} />
-          
-          {/* Aplikacije */}
-          
           
           {/* SEO */}
           <Route path="/seo/optimizacija" element={<SEOOptimizacija />} />
