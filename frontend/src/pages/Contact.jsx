@@ -163,49 +163,51 @@ const Contact = () => {
                           <select
                             name="service"
                         value={formData.service}
-                        onChange={handleChange}
-                        className="w-full px-4 py-2 bg-[#0f1419] border border-[#28A745]/20 text-white rounded-md focus:border-[#28A745] focus:outline-none"
+                            onChange={handleChange}
+                            className="w-full px-4 py-2 bg-[#0f1419] border border-[#28A745]/20 text-white rounded-md focus:border-[#28A745] focus:outline-none"
+                          >
+                            <option value="">Izaberite uslugu</option>
+                            <option value="web-development">Izrada Web Sajtova</option>
+                            <option value="wordpress">WordPress Development</option>
+                            <option value="ecommerce">WooCommerce/PrestaShop</option>
+                            <option value="web-apps">Web Aplikacije</option>
+                            <option value="seo">SEO Optimizacija</option>
+                            <option value="hosting">Hosting i Održavanje</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div>
+                        <label className="text-white mb-2 block">Poruka *</label>
+                        <Textarea
+                          name="message"
+                          value={formData.message}
+                          onChange={handleChange}
+                          required
+                          placeholder="Opišite svoj projekat ili postavite pitanje..."
+                          rows={6}
+                          className="bg-[#0f1419] border-[#28A745]/20 text-white placeholder-gray-500 focus:border-[#28A745]"
+                        />
+                      </div>
+
+                      <Button
+                        type="submit"
+                        disabled={isSubmitting}
+                        size="lg"
+                        className="w-full bg-[#28A745] hover:bg-[#1E7E34] text-white py-6 text-lg rounded-xl transform hover:scale-105 transition-all duration-300"
                       >
-                        <option value="">Izaberite uslugu</option>
-                        <option value="web-development">Izrada Web Sajtova</option>
-                        <option value="wordpress">WordPress Development</option>
-                        <option value="ecommerce">WooCommerce/PrestaShop</option>
-                        <option value="web-apps">Web Aplikacije</option>
-                        <option value="seo">SEO Optimizacija</option>
-                        <option value="hosting">Hosting i Održavanje</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="text-white mb-2 block">Poruka *</label>
-                    <Textarea
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      required
-                      placeholder="Opišite svoj projekat ili postavite pitanje..."
-                      rows={6}
-                      className="bg-[#0f1419] border-[#28A745]/20 text-white placeholder-gray-500 focus:border-[#28A745]"
-                    />
-                  </div>
-
-                  <Button
-                    type="submit"
-                    disabled={isSubmitting}
-                    size="lg"
-                    className="w-full bg-[#28A745] hover:bg-[#1E7E34] text-white py-6 text-lg rounded-xl transform hover:scale-105 transition-all duration-300"
-                  >
-                    {isSubmitting ? (
-                      'Slanje...'
-                    ) : (
-                      <>
-                        Pošalji poruku
-                        <Send className="ml-2" size={20} />
-                      </>
-                    )}
-                  </Button>
-                </form>
+                        {isSubmitting ? (
+                          'Slanje...'
+                        ) : (
+                          <>
+                            Pošalji poruku
+                            <Send className="ml-2" size={20} />
+                          </>
+                        )}
+                      </Button>
+                    </form>
+                  </>
+                )}
               </CardContent>
             </Card>
           </div>
