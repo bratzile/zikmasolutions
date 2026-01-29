@@ -61,47 +61,78 @@ const PortfolioDetail = () => {
             {/* Overview */}
             <section>
               <h2 className="text-3xl font-bold text-white mb-6">Pregled projekta</h2>
-              <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                {project.description}
-              </p>
-              <p className="text-gray-300 text-lg leading-relaxed">
-                Ovaj projekat predstavlja kompleksno rešenje koje je razvijeno sa ciljem da obezbedi najviši nivo 
-                funkcionalnosti i korisničkog iskustva. Kroz pažljivo planirane faze razvoja, uspeli smo da 
-                kreiramo proizvod koji ne samo da ispunjava potrebe klijenta, već ih i prevazilazi.
-              </p>
+              {project.fullDescription ? (
+                <div className="text-gray-300 text-lg leading-relaxed whitespace-pre-line">
+                  {project.fullDescription}
+                </div>
+              ) : (
+                <>
+                  <p className="text-gray-300 text-lg leading-relaxed mb-6">
+                    {project.description}
+                  </p>
+                  <p className="text-gray-300 text-lg leading-relaxed">
+                    Ovaj projekat predstavlja kompleksno rešenje koje je razvijeno sa ciljem da obezbedi najviši nivo 
+                    funkcionalnosti i korisničkog iskustva. Kroz pažljivo planirane faze razvoja, uspeli smo da 
+                    kreiramo proizvod koji ne samo da ispunjava potrebe klijenta, već ih i prevazilazi.
+                  </p>
+                </>
+              )}
             </section>
 
             {/* Challenge */}
             <section>
               <h2 className="text-3xl font-bold text-white mb-6">Izazov</h2>
               <p className="text-gray-300 text-lg leading-relaxed">
-                Klijent je imao potrebu za modernim digitalnim rešenjem koje bi omogućilo bolju komunikaciju sa 
+                {project.challenge || `Klijent je imao potrebu za modernim digitalnim rešenjem koje bi omogućilo bolju komunikaciju sa 
                 korisnicima i efikasnije upravljanje poslovnim procesima. Glavni izazov je bio kreiranje sistema 
-                koji bi bio intuitivno jednostavan za korišćenje, ali dovoljno moćan da podrži sve potrebne funkcionalnosti.
+                koji bi bio intuitivno jednostavan za korišćenje, ali dovoljno moćan da podrži sve potrebne funkcionalnosti.`}
               </p>
             </section>
 
             {/* Solution */}
             <section>
               <h2 className="text-3xl font-bold text-white mb-6">Naše rešenje</h2>
-              <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                Pristupili smo projektu kroz nekoliko ključnih faza:
-              </p>
-              <div className="space-y-4">
-                {[
-                  'Detaljna analiza zahteva i planiranje arhitekture sistema',
-                  'Kreiranje modernog i intuitivnog korisničkog interfejsa',
-                  'Implementacija robustnog backend sistema sa skalabilnošću na umu',
-                  'Integracija svih potrebnih servisa i API-ja',
-                  'Temeljno testiranje i optimizacija performansi'
-                ].map((step, index) => (
-                  <div key={index} className="flex items-start space-x-3 bg-[#1a2332]/50 border border-[#28A745]/20 rounded-lg p-4">
-                    <CheckCircle className="text-[#28A745] flex-shrink-0 mt-1" size={20} />
-                    <span className="text-gray-300">{step}</span>
+              {project.solution ? (
+                <p className="text-gray-300 text-lg leading-relaxed">
+                  {project.solution}
+                </p>
+              ) : (
+                <>
+                  <p className="text-gray-300 text-lg leading-relaxed mb-6">
+                    Pristupili smo projektu kroz nekoliko ključnih faza:
+                  </p>
+                  <div className="space-y-4">
+                    {[
+                      'Detaljna analiza zahteva i planiranje arhitekture sistema',
+                      'Kreiranje modernog i intuitivnog korisničkog interfejsa',
+                      'Implementacija robustnog backend sistema sa skalabilnošću na umu',
+                      'Integracija svih potrebnih servisa i API-ja',
+                      'Temeljno testiranje i optimizacija performansi'
+                    ].map((step, index) => (
+                      <div key={index} className="flex items-start space-x-3 bg-[#1a2332]/50 border border-[#28A745]/20 rounded-lg p-4">
+                        <CheckCircle className="text-[#28A745] flex-shrink-0 mt-1" size={20} />
+                        <span className="text-gray-300">{step}</span>
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
+                </>
+              )}
             </section>
+
+            {/* Services if available */}
+            {project.services && project.services.length > 0 && (
+              <section>
+                <h2 className="text-3xl font-bold text-white mb-6">Pružene usluge</h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {project.services.map((service, index) => (
+                    <div key={index} className="flex items-center space-x-3 bg-[#1a2332]/50 border border-[#28A745]/20 rounded-lg p-4">
+                      <CheckCircle className="text-[#28A745] flex-shrink-0" size={20} />
+                      <span className="text-gray-300">{service}</span>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            )}
 
             {/* Technologies */}
             <section>
@@ -147,14 +178,40 @@ const PortfolioDetail = () => {
                       <p className="text-gray-400 text-sm mb-1">Klijent</p>
                       <p className="text-white font-medium">{project.client}</p>
                     </div>
+                    {project.industry && (
+                      <div>
+                        <p className="text-gray-400 text-sm mb-1">Industrija</p>
+                        <p className="text-white font-medium">{project.industry}</p>
+                      </div>
+                    )}
                     <div>
                       <p className="text-gray-400 text-sm mb-1">Godina</p>
                       <p className="text-white font-medium">{project.year}</p>
                     </div>
+                    {project.duration && (
+                      <div>
+                        <p className="text-gray-400 text-sm mb-1">Trajanje</p>
+                        <p className="text-white font-medium">{project.duration}</p>
+                      </div>
+                    )}
                     <div>
                       <p className="text-gray-400 text-sm mb-1">Kategorija</p>
                       <p className="text-white font-medium">{project.category}</p>
                     </div>
+                    {project.website && (
+                      <div>
+                        <p className="text-gray-400 text-sm mb-1">Web sajt</p>
+                        <a 
+                          href={project.website} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-[#28A745] hover:text-[#34D058] font-medium flex items-center"
+                        >
+                          Posetite sajt
+                          <ExternalLink size={16} className="ml-2" />
+                        </a>
+                      </div>
+                    )}
                   </div>
                 </CardContent>
               </Card>
