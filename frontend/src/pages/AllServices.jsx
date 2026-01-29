@@ -39,7 +39,7 @@ const AllServices = () => {
 
         {/* Sve usluge po kategorijama */}
         {serviceCategories.map((category, catIndex) => {
-          const CategoryIcon = iconMap[category.icon];
+          const CategoryIcon = categoryIconMap[category.icon];
           return (
             <div key={category.id} className="mb-20" data-aos="fade-up" data-aos-delay={catIndex * 100}>
               {/* Category Header */}
@@ -55,36 +55,39 @@ const AllServices = () => {
 
               {/* Services Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {category.services.map((service, servIndex) => (
-                  <Card
-                    key={service.id}
-                    className="bg-[#1a2332]/50 border-[#28A745]/20 hover:border-[#28A745] transition-all duration-300 hover:transform hover:scale-105 cursor-pointer group"
-                    data-aos="fade-up"
-                    data-aos-delay={servIndex * 50}
-                  >
-                    <CardHeader>
-                      <div
-                        className="w-14 h-14 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300"
-                        style={{ backgroundColor: `${service.color}20` }}
-                      >
-                        <div className="w-10 h-10 bg-gradient-to-br from-[#28A745] to-[#1E7E34] rounded-lg"></div>
-                      </div>
-                      <CardTitle className="text-white text-xl font-poppins">{service.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <CardDescription className="text-gray-400 mb-6 text-base">
-                        {service.shortDesc}
-                      </CardDescription>
-                      <Link
-                        to={service.fullPath}
-                        className="inline-flex items-center font-medium group text-[#28A745] hover:text-[#34D058]"
-                      >
-                        Detaljnije
-                        <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
-                      </Link>
-                    </CardContent>
-                  </Card>
-                ))}
+                {category.services.map((service, servIndex) => {
+                  const ServiceIcon = getServiceIcon(service.icon);
+                  return (
+                    <Card
+                      key={service.id}
+                      className="bg-[#1a2332]/50 border-[#28A745]/20 hover:border-[#28A745] transition-all duration-300 hover:transform hover:scale-105 cursor-pointer group"
+                      data-aos="fade-up"
+                      data-aos-delay={servIndex * 50}
+                    >
+                      <CardHeader>
+                        <div
+                          className="w-14 h-14 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300"
+                          style={{ backgroundColor: `${service.color}20` }}
+                        >
+                          <ServiceIcon size={28} style={{ color: service.color }} />
+                        </div>
+                        <CardTitle className="text-white text-xl font-poppins">{service.title}</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <CardDescription className="text-gray-400 mb-6 text-base">
+                          {service.shortDesc}
+                        </CardDescription>
+                        <Link
+                          to={service.fullPath}
+                          className="inline-flex items-center font-medium group text-[#28A745] hover:text-[#34D058]"
+                        >
+                          Detaljnije
+                          <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                        </Link>
+                      </CardContent>
+                    </Card>
+                  );
+                })}
               </div>
             </div>
           );
