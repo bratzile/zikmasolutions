@@ -129,11 +129,11 @@ const FinalHome = () => {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16" data-aos="fade-up" data-aos-delay="300">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 mt-12 md:mt-16 px-2" data-aos="fade-up" data-aos-delay="300">
               {stats.map((stat, index) => (
-                <div key={index} className="bg-[#1a2332]/50 backdrop-blur-sm border border-[#ff6f61]/20 rounded-xl p-4 hover:border-[#ff6f61] transition-all duration-300">
-                  <div className="text-3xl font-bold text-[#ff6f61] mb-1">{stat.value}</div>
-                  <div className="text-sm text-gray-400">{stat.label}</div>
+                <div key={index} className="bg-[#1a2332]/50 backdrop-blur-sm border border-[#ff6f61]/20 rounded-xl p-3 sm:p-4 hover:border-[#ff6f61] transition-all duration-300">
+                  <div className="text-2xl sm:text-3xl font-bold text-[#ff6f61] mb-1">{stat.value}</div>
+                  <div className="text-xs sm:text-sm text-gray-400">{stat.label}</div>
                 </div>
               ))}
             </div>
