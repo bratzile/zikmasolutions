@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Code, Smartphone, TrendingUp, Zap, Shield, Palette, Users, Headphones, Award, Clock, Target, BarChart, Globe, Sparkles } from 'lucide-react';
+import { ArrowRight, CheckCircle, Code, Smartphone, TrendingUp, Zap, Shield, Palette, Users, Headphones, Award, Target, Globe, Sparkles, Layers, Search, BarChart } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../components/ui/accordion';
@@ -17,55 +17,55 @@ const IzradaWebSajtova = () => {
     {
       icon: <Palette className="text-white" size={24} />,
       title: 'Custom Dizajn',
-      desc: 'Jedinstveni vizuelni identitet prilagođen vašem brendu i poslovnim ciljevima. Moderni UI/UX pristup fokusiran na konverzije.'
+      desc: 'Jedinstveni vizuelni identitet prilagođen vašem brendu i poslovnim ciljevima. Kreiramo moderne, estetski privlačne dizajne koji odražavaju vrednosti vaše kompanije i privlače vašu ciljnu publiku. Svaki element dizajna je pažljivo osmišljen da pruži optimalno korisničko iskustvo.'
     },
     {
       icon: <Smartphone className="text-white" size={24} />,
       title: 'Responzivnost',
-      desc: 'Savršen prikaz na svim uređajima - desktop, tablet, mobilni telefoni. Mobile-first pristup za maksimalan reach.'
+      desc: 'Savršen prikaz na svim uređajima - desktop računarima, tabletima i mobilnim telefonima. Mobile-first pristup obezbeđuje da vaš sajt izgleda i funkcioniše besprekorno bez obzira na veličinu ekrana. Preko 60% korisnika dolazi sa mobilnih uređaja, zato je responzivnost ključna.'
     },
     {
       icon: <TrendingUp className="text-white" size={24} />,
       title: 'SEO Optimizacija',
-      desc: 'Ugrađena SEO optimizacija za bolje rangiranje na pretraživačima. Tehnički SEO, structured data, page speed optimization.'
+      desc: 'Ugrađena SEO optimizacija koja pomaže vašem sajtu da rangira bolje na pretraživačima. Implementiramo tehnički SEO, optimizujemo meta tagove, strukturirane podatke i brzinu učitavanja. Svaki sajt pravimo sa fokusom na vidljivost u Google pretrazi kako bi privukli više organskog saobraćaja.'
     },
     {
       icon: <Zap className="text-white" size={24} />,
       title: 'Brze Performanse',
-      desc: 'Optimizovan kod za maksimalnu brzinu učitavanja. Lazy loading, CDN integracija, image optimization. Sub-2s load time.'
+      desc: 'Optimizovan kod za maksimalnu brzinu učitavanja stranica. Implementiramo lazy loading, CDN integraciju, kompresiju slika i savremene tehnike optimizacije. Brzi sajtovi zadržavaju korisnike i bolje rangiraju na pretraživačima. Svaki sajt testiramo da postiže vrhunske performanse.'
     },
     {
       icon: <Shield className="text-white" size={24} />,
       title: 'Sigurnost',
-      desc: 'SSL sertifikat, redovni backup-ovi i zaštita od napada. GDPR compliant. Security best practices.'
+      desc: 'SSL sertifikati, redovni backup-ovi i zaštita od napada su standard u svakom našem projektu. GDPR compliant rešenja koja štite privatnost korisnika. Implementiramo sve najnovije sigurnosne mere kako bi vaši podaci i podaci vaših klijenata bili maksimalno zaštićeni.'
     },
     {
       icon: <Target className="text-white" size={24} />,
       title: 'Skalabilnost',
-      desc: 'Arhitektura spremna za rast i buduće proširenje funkcionalnosti. Modularni pristup za laku maintainability.'
+      desc: 'Arhitektura spremna za rast i buduće proširenje funkcionalnosti. Modularni pristup koji omogućava laku nadgradnju i održavanje. Kako vaš biznis raste, vaš sajt može pratiti taj rast dodavanjem novih funkcionalnosti bez potrebe za potpunom rekonstrukcijom.'
     }
   ];
 
   const benefits = [
     {
       icon: <Award className="text-[#28A745]" size={32} />,
-      title: 'Enterprise Kvalitet',
-      desc: 'Iskustvo u razvoju kompleksnih korporativnih rešenja sa 200+ realizovanih projekata'
+      title: 'Iskustvo i Stručnost',
+      desc: 'Više od decenije rada u industriji web developmenta donelo nam je bogato iskustvo u izradi kompleksnih digitalnih rešenja. Realizovali smo preko 200 projekata različite kompleksnosti - od jednostavnih prezentacionih sajtova do složenih enterprise platformi. Naš tim čine sertifikovani stručnjaci koji kontinuirano prate najnovije trendove i tehnologije.'
     },
     {
       icon: <Users className="text-[#28A745]" size={32} />,
-      title: 'Full-Stack Tim',
-      desc: 'Kompletna podrška od dizajna do deployment-a. UI/UX dizajneri, frontend i backend developeri.'
+      title: 'Kompletan Tim za Vaš Uspeh',
+      desc: 'Full-stack pristup razvoju znači da nudimo kompletnu podršku od početne ideje do finalnog lansiranja i dalje. Naš tim uključuje UI/UX dizajnere koji kreiraju intuitivna korisničка iskustva, frontend developere koji pretvaraju dizajn u kod, backend developere za serversku logiku i baze podataka, kao i project menadžere koji koordiniraju sve aktivnosti i održavaju komunikaciju sa vama.'
     },
     {
       icon: <Code className="text-[#28A745]" size={32} />,
-      title: 'Moderna Tehnologija',
-      desc: 'React, Next.js, Node.js - najnoviji tech stack. JAMstack arhitektura za maksimalne performanse.'
+      title: 'Moderne Tehnologije',
+      desc: 'Koristimo najnoviji tech stack industrije - React i Next.js za frontend, Node.js i Python za backend razvoj, PostgreSQL i MongoDB za baze podataka. JAMstack arhitektura obezbeđuje maksimalne performanse i sigurnost. Svaka tehnologija koju biremo je pažljivo odabrana na osnovu specifičnih potreba projekta, skalabilnosti i održivosti u budućnosti.'
     },
     {
       icon: <Headphones className="text-[#28A745]" size={32} />,
-      title: 'Kontinuirana Podrška',
-      desc: 'Tehnička podrška i održavanje nakon lansiranja. Hosting, backup, security updates, 24/7 monitoring.'
+      title: 'Podrška i Održavanje',
+      desc: 'Naša saradnja ne završava se sa lansiranjem sajta. Pružamo kontinuiranu tehničku podršku, redovna ažuriranja, sigurnosne zakrpe i optimizacije performansi. Nudimo managed hosting servise sa automatskim backup-ovima i monitoringom rada sajta. Dostupni smo vam kada god vam je potrebna pomoć, bilo da se radi o hitnim intervencijama ili planiranim proširenjima.'
     }
   ];
 
@@ -73,103 +73,27 @@ const IzradaWebSajtova = () => {
     {
       step: '01',
       title: 'Discovery & Analiza',
-      desc: 'Detaljno analiziramo vaše poslovne potrebe, ciljnu grupu i konkurenciju. Workshop sesije sa vašim timom. Kreiramo strategiju, sitemap i wireframe-ove.',
-      duration: '1-2 nedelje'
+      desc: 'U prvoj fazi detaljno analiziramo vaše poslovne potrebe, ciljeve i ciljnu grupu. Organizujemo workshop sesije sa vašim timom kako bismo u potpunosti razumeli vašu viziju i specifične zahteve. Analiziramo konkurenciju, identifikujemo ključne funkcionalnosti i definišemo strategiju. Kreiramo sitemap koji mapira strukturu sajta, wireframe-ove koji prikazuju osnovu izgled stranica, i definišemo tehnološki stack koji najbolje odgovara vašim potrebama.'
     },
     {
       step: '02',
       title: 'UI/UX Dizajn',
-      desc: 'Kreiramo moderan, intuitivan dizajn fokusiran na korisničko iskustvo i konverzije. Mockup-i svih stranica. Interaktivni prototip za odobrenje.',
-      duration: '2-3 nedelje'
+      desc: 'Naš dizajnerski tim kreira moderni, intuitivan dizajn fokusiran na korisničko iskustvo i poslovne ciljeve. Razvijamo kompletne mockup-e svih stranica u visokoj rezoluciji, kreiramo stil vodič sa definisanim bojama, fontovima i komponentama, i pravimo interaktivni prototip koji možete testirati. Kroz iterativni proces i vaš feedback dolazimo do finalnog dizajna sa kojim ste 100% zadovoljni.'
     },
     {
       step: '03',
       title: 'Development',
-      desc: 'Razvijamo sajt koristeći najnovije tehnologije i best practices. Agile pristup sa bi-weekly sprint-ovima. Redovno vam prikazujemo napredak.',
-      duration: '3-6 nedelja'
+      desc: 'Frontend i backend timovi rade paralelno na razvoju sajta koristeći najnovije tehnologije i best practices iz industrije. Koristimo agile metodologiju sa sprint-ovima što omogućava fleksibilnost i transparentnost. Redovno vam prikazujemo napredak, implementiramo vaš feedback i održavamo blisku komunikaciju. Celokupan kod verzionišemo kroz Git što omogućava punu transparentnost i mogućnost praćenja razvoja.'
     },
     {
       step: '04',
       title: 'Testiranje & QA',
-      desc: 'Detaljno testiramo funkcionalnost, performanse, kompatibilnost. Load testing, security audit, accessibility testing. Bug fixing i optimizacije.',
-      duration: '1-2 nedelje'
+      desc: 'Pre lansiranja vršimo rigorozno testiranje funkcionalnosti, performansi i kompatibilnosti. Testiramo sajt na različitim browserima (Chrome, Firefox, Safari, Edge) i uređajima (desktop, tablet, mobilni). Vršimo load testing da osiguramo da sajt može podneti veliki broj istovremenih korisnika, security audit kako bi identifikovali potencijalne ranjivosti, i accessibility testing da sajt bude pristupačan svima. Sve pronađene probleme ispravlyamo i optimizujemo sajt za vrhunske performanse.'
     },
     {
       step: '05',
       title: 'Lansiranje & Podrška',
-      desc: 'Deployment na production server sa zero-downtime. DNS setup, SSL sertifikat, analytics. Obuka vašeg tima. 30 dana besplatne post-launch podrške.',
-      duration: 'Kontinuirano'
-    }
-  ];
-
-  const pricing = [
-    {
-      name: 'Osnovni',
-      price: '500€',
-      desc: 'Perfektan za male biznise i startove',
-      features: [
-        '5-7 stranica',
-        'Responzivni dizajn',
-        'Osnovna SEO optimizacija',
-        'Kontakt forma',
-        'Google Analytics',
-        '30 dana podrška'
-      ],
-      highlighted: false
-    },
-    {
-      name: 'Profesionalni',
-      price: '1,200€',
-      desc: 'Najpopularniji paket za biznis',
-      features: [
-        '10-15 stranica',
-        'Custom dizajn',
-        'Napredna SEO optimizacija',
-        'CMS sistem',
-        'Blog integracija',
-        'Multi-jezik (2 jezika)',
-        '60 dana podrška'
-      ],
-      highlighted: true
-    },
-    {
-      name: 'Enterprise',
-      price: 'Od 3,000€',
-      desc: 'Za kompleksne korporativne sajtove',
-      features: [
-        'Neograničen broj stranica',
-        'Premium custom dizajn',
-        'Full SEO strategija',
-        'Napredni CMS',
-        'Multi-jezik (3+ jezika)',
-        'CRM integracija',
-        'API integracije',
-        '90 dana podrška'
-      ],
-      highlighted: false
-    }
-  ];
-
-  const faqs = [
-    {
-      question: 'Koliko traje izrada profesionalnog web sajta?',
-      answer: 'Za prezentacioni sajt sa 5-10 stranica potrebno je 3-4 nedelje od potpisivanja ugovora do lansiranja. Za kompleksniji korporativni sajt sa custom funkcionalnostima (multi-jezik, integracije, CMS) 6-8 nedelja. Enterprise projekti sa kompleksnim integracijama mogu trajati 2-3 meseca. Koristimo agile pristup pa možete videti napredak svake dve nedelje.'
-    },
-    {
-      question: 'Koja je cena izrade web sajta u Srbiji 2025?',
-      answer: 'Prezentacioni sajt (5-10 stranica) od 500€. Korporativni sajt sa CMS-om od 1,200€. Kompleksne B2B platforme sa integracijama 3,000-8,000€. Enterprise rešenja sa custom funkcionalnostima 8,000€+. Cena zavisi od dizajna (template vs custom), broja stranica, funkcionalnosti (multi-jezik, CMS, CRM integracija), i kompleksnosti razvoja. Kontaktirajte nas za detaljnu procenu - besplatna konsultacija.'
-    },
-    {
-      question: 'Da li nudite hosting i održavanje web sajtova?',
-      answer: 'Da, nudimo profesionalne hosting pakete sa 99.9% uptime garantijom. Managed hosting na AWS/Google Cloud sa automatskim backup-ovima (daily), sigurnosnim update-ovima, SSL sertifikatom, CDN za brze performanse. Tehnička podrška 24/7 email support, 4h response time. Održavanje uključuje content update-e, security patching, performance monitoring. Paketi od 50€/mesečno.'
-    },
-    {
-      question: 'Koje tehnologije koristite za razvoj web sajtova?',
-      answer: 'Za moderne, performance-focused sajtove koristimo React i Next.js sa JAMstack arhitekturom. Za enterprise CMS projekte WordPress sa custom theme development. Backend: Node.js, Python/Django. Database: PostgreSQL, MongoDB. Hosting: AWS, Google Cloud, Vercel. Git za version control, CI/CD pipeline za automated deployment. Sve moderne best practices - responsive design, accessibility, SEO optimization.'
-    },
-    {
-      question: 'Da li je SEO optimizacija uključena u cenu izrade sajta?',
-      answer: 'Da, osnovna SEO optimizacija je ugrađena u svaki projekat - tehnički SEO (semantic HTML, meta tags, structured data, sitemap), optimizacija brzine (lazy loading, image optimization, code splitting), mobile-first responsive design. Za napredne SEO usluge (keyword research, content strategy, link building, ongoing optimization) nudimo posebne SEO pakete od 300€/mesečno. Google Analytics i Search Console setup uključen.'
+      desc: 'Deployment na produkcioni server vršimo pažljivo sa zero-downtime pristupom. Podešavamo DNS zapise, instaliramo SSL sertifikate za sigurnu komunikaciju, i integrišemo Google Analytics i druge alate za praćenje. Obučavamo vaš tim za upravljanje sadržajem ako je to potrebno. Nakon lansiranja, pratimo performanse sajta i pružamo vam kontinuiranu tehničku podršku. Dostupni smo za sve izmene, nadogradnje i pomoć kada vam je potrebna.'
     }
   ];
 
@@ -179,7 +103,36 @@ const IzradaWebSajtova = () => {
     { name: 'Node.js', logo: '🟢' },
     { name: 'WordPress', logo: '📝' },
     { name: 'MongoDB', logo: '🍃' },
-    { name: 'AWS', logo: '☁️' }
+    { name: 'PostgreSQL', logo: '🐘' },
+    { name: 'AWS', logo: '☁️' },
+    { name: 'Docker', logo: '🐳' }
+  ];
+
+  const faqs = [
+    {
+      question: 'Koliko traje izrada profesionalnog web sajta?',
+      answer: 'Vreme potrebno za izradu web sajta zavisi od njegove kompleksnosti i obima funkcionalnosti. Prezentacioni sajt sa osnovnim informacijama o vašoj kompaniji može biti završen relativno brzo, dok kompleksniji korporativni sajtovi sa custom funkcionalnostima, multi-jezičnom podrškom i integracijom sa drugim sistemima zahtevaju više vremena. Faktori koji utiču na trajanje uključuju broj stranica, dizajnerske zahteve, custom funkcionalnosti, integracije sa eksternim sistemima i broj revizija. Koristimo agile metodologiju što omogućava da vidite napredak tokom čitavog procesa i dajete feedback u redovnim intervalima.'
+    },
+    {
+      question: 'Koja je cena izrade web sajta?',
+      answer: 'Cena izrade web sajta u Srbiji zavisi od mnogo faktora i svaki projekat je jedinstven. Osnovni prezentacioni sajtovi sa nekoliko stranica i jednostavnim dizajnom imaju jednu cenu, dok kompleksni korporativni sajtovi sa naprednim funkcionalnostima, custom dizajnom, CMS sistemom i integracijama imaju potpuno drugu. Faktori koji utiču na cenu uključuju dizajn (template vs potpuno custom), broj stranica i kompleksnost strukture, funkcionalnosti (kontakt forme, newsletter, blog, galerije), multi-jezična podrška, CRM i ERP integracije, custom backend razvoj i hosting zahtevi. Kontaktirajte nas za besplatnu procenu - nakon što razumemo vaše potrebe možemo dati preciznu ponudu.'
+    },
+    {
+      question: 'Da li nudite hosting i održavanje web sajtova?',
+      answer: 'Da, pružamo kompletne hosting i održavanje servise kako biste imali potpunu podršku za vaš web sajt. Naši managed hosting paketi uključuju pouzdane servere sa visokom dostupnošću, automatske dnevne backup-ove za zaštitu podataka, SSL sertifikate za sigurnu komunikaciju, CDN za brže učitavanje širom sveta i redovne sigurnosne update-e. Pored hostinga, nudimo i servise održavanja koji uključuju content update-e (izmene tekstova, dodavanje slika, nove stranice), security patching i ažuriranja sistema, performance monitoring i optimizaciju, tehnička podrška sa brzim vremenom odgovora i redovne izveštaje o radu sajta. Sve ovo omogućava vam da se fokusirate na vaš biznis dok mi brinemo o tehničkim aspektima.'
+    },
+    {
+      question: 'Koje tehnologije koristite za razvoj web sajtova?',
+      answer: 'Koristimo moderne tehnologije koje obezbeđuju performanse, sigurnost i skalabilnost. Za prezentacione i performance-fokusirane sajtove koristimo React i Next.js framework sa JAMstack arhitekturom koja daje izuzetne performanse. Za sajtove koji zahtevaju moćan content management sistem koristimo WordPress sa potpuno custom theme developmentom. Backend razvijamo sa Node.js, Express.js, Python i Django frameworkom u zavisnosti od specifičnih zahteva projekta. Za baze podataka koristimo PostgreSQL za relacione podatke i MongoDB za fleksibilnije dokument-baziranu strukturu. Hosting vršimo na AWS, Google Cloud ili Vercel platformama u zavisnosti od potreba. Sve projekte verzionišemo kroz Git, koristimo CI/CD pipeline za automatski deployment i implementiramo sve moderne best practices - responsive design, accessibility standarde, SEO optimizaciju i security hardening.'
+    },
+    {
+      question: 'Da li je SEO optimizacija uključena u izradu sajta?',
+      answer: 'SEO optimizacija je integralni deo svakog web sajta koji razvijamo. Osnovna tehnička SEO optimizacija je uključena u svakom projektu - to podrazumeva semantic HTML5 markup koji pretraživači lako razumeju, optimizovane meta tagove (title, description, keywords), structured data (Schema.org markup) za rich results, XML sitemap za lakše indeksiranje, robots.txt konfiguraciju, optimizaciju brzine učitavanja (image optimization, code splitting, lazy loading), mobile-first responsive design i sve on-page SEO elemente. Za klijente koji žele sveobuhvatnu SEO strategiju nudimo napredne SEO servise koji uključuju keyword research i content strategiju, SEO konkurentsku analizu, content marketing i link building, ongoing SEO monitoring i optimizaciju, local SEO za lokalne biznise i Google Analytics i Search Console setup. Osnovni tehnički SEO dolazi sa svakim sajtom, dok napredne SEO usluge možete dodati kao poseban servis.'
+    },
+    {
+      question: 'Šta dobijam nakon što sajt bude završen?',
+      answer: 'Nakon završetka i lansiranja vašeg web sajta, dobijate kompletan paket koji vam daje punu kontrolu i dokumentaciju. To uključuje sav izvorni kod sajta sa kompletnom dokumentacijom, pristup admin panelu za upravljanje sadržajem ako sajt ima CMS, sve dizajn fajlove i asete (logotipe, ikone, slike), tehničku dokumentaciju sa uputstvima za održavanje, obuku za vaš tim kako da koristi admin panel i upravlja sadržajem, sve informacije o hostingu i serverima i transfer vlasništva svih domena i naloga. Takođe dobijate i period besplatne podrške nakon lansiranja tokom kojeg možete kontaktirati našu podršku za bilo kakva pitanja ili pomoć. Vaš web sajt je u potpunosti vaše vlasništvo i imate punu kontrolu nad njim.'
+    }
   ];
 
   const structuredData = {
@@ -193,25 +146,19 @@ const IzradaWebSajtova = () => {
     },
     "serviceType": "Web Development",
     "areaServed": "RS",
-    "description": "Profesionalna izrada web sajtova u Srbiji. Responzivni dizajn, SEO optimizacija, brze performanse.",
-    "offers": {
-      "@type": "AggregateOffer",
-      "lowPrice": "500",
-      "highPrice": "8000",
-      "priceCurrency": "EUR"
-    }
+    "description": "Profesionalna izrada web sajtova u Srbiji. Responzivni dizajn, SEO optimizacija, brze performanse. Full-stack tim sa preko 10 godina iskustva."
   };
 
   return (
     <>
       <Helmet>
         <title>Izrada Web Sajtova Srbija | Profesionalni Web Development 2025</title>
-        <meta name="description" content="Moderna izrada web sajtova u Srbiji. Responzivni dizajn, SEO optimizacija, brze performanse. Od 500€. Besplatna konsultacija ☎️ Pozovite odmah!" />
-        <meta name="keywords" content="izrada web sajtova, web development srbija, izrada web sajtova beograd, moderni web sajt, responzivni web sajt, profesionalna izrada sajta, web dizajn srbija, pravljenje web sajta cena" />
+        <meta name="description" content="Moderna izrada web sajtova u Srbiji. Responzivni dizajn, SEO optimizacija, brze performanse. Preko 200 uspešnih projekata. Besplatna konsultacija!" />
+        <meta name="keywords" content="izrada web sajtova, web development srbija, izrada web sajtova beograd, moderni web sajt, responzivni web sajt, profesionalna izrada sajta, web dizajn srbija, pravljenje web sajta, kreiranje web sajta" />
         
         {/* Open Graph */}
         <meta property="og:title" content="Izrada Web Sajtova Srbija | Profesionalni Web Development 2025" />
-        <meta property="og:description" content="Moderna izrada web sajtova u Srbiji. Responzivni dizajn, SEO optimizacija, brze performanse. Od 500€." />
+        <meta property="og:description" content="Moderna izrada web sajtova u Srbiji. Responzivni dizajn, SEO optimizacija, brze performanse." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://zikmasolutions.rs/web-sajtovi/izrada-web-sajta" />
         
@@ -269,8 +216,8 @@ const IzradaWebSajtova = () => {
               </h1>
 
               <p className="text-xl text-gray-300 mb-10 leading-relaxed" data-aos="fade-up" data-aos-delay="100">
-                Moderna izrada web sajtova u Srbiji. Responzivni dizajn, SEO optimizacija, brze performanse. 
-                Razvijamo sajtove koji donose rezultate - od 500€.
+                Moderna izrada web sajtova u Srbiji sa fokusom na responzivni dizajn, SEO optimizaciju i vrhunske performanse. 
+                Razvijamo web sajtove koji donose rezultate vašem poslovanju i privlače klijente.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12" data-aos="fade-up" data-aos-delay="200">
@@ -315,10 +262,11 @@ const IzradaWebSajtova = () => {
           <div className="container mx-auto px-4">
             <div className="text-center mb-12" data-aos="fade-up">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-poppins">
-                Šta Dobijate u Izradi Web Sajta
+                Šta Dobijate Izradom Web Sajta
               </h2>
-              <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-                Kompletan paket funkcionalnosti za moderan, brz i SEO optimizovan web sajt
+              <p className="text-gray-400 text-lg max-w-3xl mx-auto">
+                Profesionalna izrada web sajtova obuhvata sve aspekte modernog web developmenta - 
+                od dizajna do tehničke implementacije i SEO optimizacije
               </p>
             </div>
 
@@ -352,10 +300,11 @@ const IzradaWebSajtova = () => {
           <div className="container mx-auto px-4">
             <div className="text-center mb-16" data-aos="fade-up">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-poppins">
-                Zašto Izabrati Zikma Solutions
+                Zašto Izabrati Zikma Solutions za Izradu Web Sajta
               </h2>
-              <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-                Vaš pouzdani partner za profesionalnu izradu web sajtova u Beogradu i Srbiji
+              <p className="text-gray-400 text-lg max-w-3xl mx-auto">
+                Sa preko decenije iskustva u web developmentu, pružamo kompletan spektar usluga 
+                izrade web sajtova - od početne ideje do finalnog lansiranja i kontinuirane podrške
               </p>
             </div>
 
@@ -371,8 +320,8 @@ const IzradaWebSajtova = () => {
                     {benefit.icon}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white mb-2">{benefit.title}</h3>
-                    <p className="text-gray-400">{benefit.desc}</p>
+                    <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
+                    <p className="text-gray-400 leading-relaxed">{benefit.desc}</p>
                   </div>
                 </div>
               ))}
@@ -387,8 +336,9 @@ const IzradaWebSajtova = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-poppins">
                 Kako Radimo na Izradi Web Sajta
               </h2>
-              <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-                Transparentan proces u 5 koraka - od ideje do lansiranja
+              <p className="text-gray-400 text-lg max-w-3xl mx-auto">
+                Naš proces izrade web sajtova je transparentan i strukturiran u pet ključnih faza. 
+                U svakoj fazi održavamo blisku komunikaciju sa vama i osiguravamo da projekat ide u pravom smeru.
               </p>
             </div>
 
@@ -406,14 +356,8 @@ const IzradaWebSajtova = () => {
                     </div>
                   </div>
                   <div className="flex-1">
-                    <div className="flex items-center justify-between mb-2">
-                      <h3 className="text-xl font-bold text-white">{step.title}</h3>
-                      <span className="text-[#28A745] text-sm flex items-center gap-1">
-                        <Clock size={14} />
-                        {step.duration}
-                      </span>
-                    </div>
-                    <p className="text-gray-400">{step.desc}</p>
+                    <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
+                    <p className="text-gray-400 leading-relaxed">{step.desc}</p>
                   </div>
                 </div>
               ))}
@@ -421,82 +365,20 @@ const IzradaWebSajtova = () => {
           </div>
         </section>
 
-        {/* 💰 CENOVNIK - Pricing */}
-        <section className="py-20 bg-[#0f1419]">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16" data-aos="fade-up">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-poppins">
-                Cena Izrade Web Sajta
-              </h2>
-              <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-                Transparentni paketi prilagođeni vašim potrebama i budžetu
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {pricing.map((plan, index) => (
-                <Card
-                  key={index}
-                  className={`${
-                    plan.highlighted
-                      ? 'bg-gradient-to-b from-[#28A745]/20 to-[#1a2332]/50 border-[#28A745] scale-105'
-                      : 'bg-[#1a2332]/50 border-[#28A745]/20'
-                  } hover:border-[#28A745] transition-all duration-300`}
-                  data-aos="fade-up"
-                  data-aos-delay={index * 100}
-                >
-                  {plan.highlighted && (
-                    <div className="bg-[#28A745] text-white text-sm font-bold py-2 text-center rounded-t-lg">
-                      NAJPOPULARNIJI
-                    </div>
-                  )}
-                  <CardHeader>
-                    <CardTitle className="text-white text-2xl font-poppins">{plan.name}</CardTitle>
-                    <CardDescription className="text-gray-400">{plan.desc}</CardDescription>
-                    <div className="mt-4">
-                      <span className="text-4xl font-bold text-[#28A745]">{plan.price}</span>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-3">
-                      {plan.features.map((feature, fIndex) => (
-                        <li key={fIndex} className="flex items-center gap-2 text-gray-300">
-                          <CheckCircle size={18} className="text-[#28A745] flex-shrink-0" />
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    <Link to="/kontakt">
-                      <Button
-                        className={`w-full mt-6 ${
-                          plan.highlighted
-                            ? 'bg-[#28A745] hover:bg-[#1E7E34]'
-                            : 'bg-[#1a2332] hover:bg-[#28A745]'
-                        } text-white`}
-                      >
-                        Izaberite Paket
-                      </Button>
-                    </Link>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* 🛠️ TEHNOLOGIJE */}
-        <section className="py-20 bg-[#0a0c0f]">
+        <section className="py-20 bg-[#0f1419]">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12" data-aos="fade-up">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-poppins">
-                Tehnologije Koje Koristimo
+                Tehnologije Za Izradu Modernih Web Sajtova
               </h2>
-              <p className="text-gray-400 text-lg">
-                Moderne tehnologije za brze i skalabilne web sajtove
+              <p className="text-gray-400 text-lg max-w-3xl mx-auto">
+                Koristimo najnovije i najpouzdanije tehnologije iz industrije koje garantuju 
+                brzinu, sigurnost i skalabilnost vašeg web sajta
               </p>
             </div>
 
-            <div className="flex flex-wrap justify-center gap-6" data-aos="fade-up" data-aos-delay="100">
+            <div className="flex flex-wrap justify-center gap-6 mb-12" data-aos="fade-up" data-aos-delay="100">
               {technologies.map((tech, index) => (
                 <div
                   key={index}
@@ -507,18 +389,29 @@ const IzradaWebSajtova = () => {
                 </div>
               ))}
             </div>
+
+            <div className="max-w-4xl mx-auto text-center" data-aos="fade-up" data-aos-delay="200">
+              <p className="text-gray-300 text-lg leading-relaxed">
+                Svaka tehnologija je pažljivo odabrana na osnovu potreba projekta. React i Next.js koristimo za 
+                moderna SPA (Single Page Application) rešenja sa izuzetnim performansama. WordPress je naš izbor 
+                za sajtove koji zahtevaju moćan CMS sistem. Node.js i moderne baze podataka omogućavaju kreiranje 
+                skalabilnih aplikacija koje mogu rasti sa vašim biznisom. Cloud hosting na AWS platformi garantuje 
+                pouzdanost i dostupnost vašeg sajta 24/7.
+              </p>
+            </div>
           </div>
         </section>
 
         {/* ❓ FAQ - Često Postavljana Pitanja */}
-        <section className="py-20 bg-[#0f1419]">
+        <section className="py-20 bg-[#0a0c0f]">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12" data-aos="fade-up">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-poppins">
-                Često Postavljana Pitanja
+                Često Postavljana Pitanja o Izradi Web Sajtova
               </h2>
-              <p className="text-gray-400 text-lg">
-                Sve što vas interesuje o izradi web sajtova
+              <p className="text-gray-400 text-lg max-w-3xl mx-auto">
+                Odgovori na najčešća pitanja koja naši klijenti postavljaju o procesu 
+                izrade web sajtova, tehnologijama i uslugama koje nudimo
               </p>
             </div>
 
@@ -533,7 +426,7 @@ const IzradaWebSajtova = () => {
                     <AccordionTrigger className="text-white hover:text-[#28A745] text-left">
                       {faq.question}
                     </AccordionTrigger>
-                    <AccordionContent className="text-gray-400">
+                    <AccordionContent className="text-gray-400 leading-relaxed">
                       {faq.answer}
                     </AccordionContent>
                   </AccordionItem>
@@ -555,9 +448,9 @@ const IzradaWebSajtova = () => {
               <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 font-poppins">
                 Spremni za Novi Web Sajt?
               </h2>
-              <p className="text-white/90 text-xl mb-8">
-                Kontaktirajte nas danas za besplatnu konsultaciju i procenu projekta. 
-                Odgovaramo u roku od 24h!
+              <p className="text-white/90 text-xl mb-8 leading-relaxed">
+                Kontaktirajte nas danas za besplatnu konsultaciju i detaljnu procenu vašeg projekta. 
+                Odgovaramo na sve upite u roku od 24 sata i pružamo profesionalnu procenu bez obaveza.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/kontakt">
