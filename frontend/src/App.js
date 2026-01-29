@@ -21,6 +21,7 @@ import RedizajnSajta from "./pages/RedizajnSajta";
 import OdrzavanjeSajta from "./pages/OdrzavanjeSajta";
 import IzradaWordPressSajta from "./pages/IzradaWordPressSajta";
 import WordPressDevelopment from "./pages/WordPressDevelopment";
+import WordPressOdrzavanje from "./pages/WordPressOdrzavanje";
 
 function App() {
   useEffect(() => {
@@ -46,6 +47,7 @@ function App() {
           <Route path="/web-sajtovi/odrzavanje-sajta" element={<OdrzavanjeSajta />} />
           <Route path="/web-sajtovi/izrada-wordpress-sajta" element={<IzradaWordPressSajta />} />
           <Route path="/web-sajtovi/wordpress-development" element={<WordPressDevelopment />} />
+          <Route path="/web-sajtovi/wordpress-odrzavanje" element={<WordPressOdrzavanje />} />
           <Route path="/web-sajtovi/redizajn-sajta" element={<ServicePage />} />
           <Route path="/web-sajtovi/odrzavanje-sajta" element={<ServicePage />} />
           <Route path="/web-sajtovi/izrada-wordpress-sajta" element={<ServicePage />} />
