@@ -86,7 +86,7 @@ const NewHeader = () => {
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-3 group">
               <img 
-                src="https://customer-assets.emergentagent.com/job_zikma-seo-portal/artifacts/l3nxnhy7_ZS.png" 
+                src="/logo.png" 
                 alt="Zikma Solutions Logo" 
                 className="w-12 h-12 rounded-lg transform group-hover:scale-105 transition-transform duration-300"
               />
