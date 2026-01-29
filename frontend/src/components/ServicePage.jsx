@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, CheckCircle } from 'lucide-react';
+import { ArrowRight, CheckCircle, Brain, Database, CreditCard, Cloud, Link as LinkIcon, BarChart, Zap, Shield, Smartphone, TrendingUp, Palette, Code, Users, Headphones, Award, Activity, DollarSign, MessageSquare, FileText, Clock, Sparkles, Target } from 'lucide-react';
 import { Button } from './ui/button';
-import { Card, CardContent } from './ui/card';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from './ui/accordion';
-import { serviceCategories, faqs } from '../newMockData';
+import { serviceCategories } from '../newMockData';
+import { getServiceDetails } from '../serviceDetailsData';
 import AOS from 'aos';
 
 const ServicePage = () => {
