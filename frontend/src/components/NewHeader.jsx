@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown, Globe, ShoppingCart, Code, TrendingUp, Megaphone, Palette, ArrowRight, Monitor, RefreshCw, Layout, Settings, Layers, Smartphone, Cloud, Cpu, Search, MapPin, FileSearch } from 'lucide-react';
+import { Menu, X, ChevronDown, Globe, ShoppingCart, Code, TrendingUp, Megaphone, Palette, ArrowRight, Monitor, RefreshCw, Layout, Settings, Layers, Smartphone, Cloud, Cpu, Search, MapPin, FileSearch, Shield, ShoppingBag, Zap, BarChart } from 'lucide-react';
 import { Button } from './ui/button';
 import { serviceCategories } from '../newMockData';
 
@@ -9,7 +9,7 @@ const categoryIconMap = {
 };
 
 const serviceIconMap = {
-  Monitor, RefreshCw, Layout, Settings, Globe, ShoppingCart, Layers, Smartphone, Cloud, Cpu, Search, MapPin, FileSearch, Code, TrendingUp
+  Monitor, RefreshCw, Layout, Settings, Globe, ShoppingCart, Layers, Smartphone, Cloud, Cpu, Search, MapPin, FileSearch, Code, TrendingUp, Shield, ShoppingBag, Zap, BarChart
 };
 
 const NewHeader = () => {
