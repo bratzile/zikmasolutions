@@ -160,26 +160,27 @@ const FinalHome = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-6">
             {mainServices.map((service, index) => {
               const IconComponent = service.icon;
               return (
                 <Link to={service.link} key={index}>
                   <Card
-                    className="bg-[#1a2332]/50 border-[#ff6f61]/20 hover:border-[#ff6f61] transition-all duration-300 hover:transform hover:scale-105 cursor-pointer group h-full"
+                    className="bg-[#1a2332]/70 border-[#ff6f61]/30 hover:border-[#ff6f61] transition-all duration-300 hover:transform hover:scale-105 cursor-pointer group h-full"
                     data-aos="fade-up"
                     data-aos-delay={index * 50}
                   >
-                    <CardHeader>
-                      <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300"
-                        style={{ backgroundColor: `${service.color}20` }}
+                    <CardHeader className="p-3 sm:p-6">
+                      <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center mb-2 sm:mb-4 group-hover:scale-110 transition-transform duration-300"
+                        style={{ backgroundColor: `${service.color}30` }}
                       >
-                        <IconComponent size={28} style={{ color: service.color }} />
+                        <IconComponent size={20} className="sm:hidden" style={{ color: service.color }} />
+                        <IconComponent size={28} className="hidden sm:block" style={{ color: service.color }} />
                       </div>
-                      <CardTitle className="text-white text-xl font-poppins">{service.title}</CardTitle>
+                      <CardTitle className="text-white text-sm sm:text-xl font-poppins">{service.title}</CardTitle>
                     </CardHeader>
-                    <CardContent>
-                      <CardDescription className="text-gray-400">
+                    <CardContent className="p-3 pt-0 sm:p-6 sm:pt-0">
+                      <CardDescription className="text-gray-400 text-xs sm:text-base">
                         {service.desc}
                       </CardDescription>
                     </CardContent>
