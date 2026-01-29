@@ -33,27 +33,6 @@ const About = () => {
     }
   ];
 
-  const team = [
-    {
-      name: 'Marko Simić',
-      role: 'CEO & Lead Developer',
-      image: 'https://i.pravatar.cc/300?img=12',
-      description: '10+ godina iskustva u web developmentu'
-    },
-    {
-      name: 'Ana Jovanović',
-      role: 'SEO & Marketing Manager',
-      image: 'https://i.pravatar.cc/300?img=45',
-      description: 'Stručnjak za digitalni marketing i SEO'
-    },
-    {
-      name: 'Nikola Petrović',
-      role: 'Full Stack Developer',
-      image: 'https://i.pravatar.cc/300?img=33',
-      description: 'Specijalizovan za React i Node.js'
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-[#0f1419] pt-32 pb-20">
       <div className="container mx-auto px-4">
