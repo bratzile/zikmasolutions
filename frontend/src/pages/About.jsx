@@ -87,18 +87,19 @@ const About = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Naša priča</h2>
           <div className="space-y-4 text-gray-300 text-lg leading-relaxed">
             <p>
-              Osnovali smo Zikma Solutions 2014. godine sa jasnom vizijom - pomoći kompanijama u Srbiji da iskoriste punu moć
-              digitalnih tehnologija. Počeli smo kao mali tim od tri developera, a danas smo porasli u agenciju sa preko 15
-              stručnjaka iz različitih oblasti.
+              Zikma Solutions je osnovana 2017. godine, ali koreni naše priče sežu mnogo dalje – u sedam godina intenzivnog freelancinga pre nego što smo napravili sledeći veliki korak. Tokom tog perioda, svaki projekat, bez obzira na veličinu ili kompleksnost, bio je prilika da učimo, istražujemo nove tehnologije i razvijamo pristup koji kombinuje kreativnost, preciznost i strateško razmišljanje.
             </p>
             <p>
-              Tokom godina, radili smo sa brojnim klijentima - od malih biznisa i startupova do velikih korporacija. Svaki
-              projekat bio je nova prilika da učimo, rastu i poboljšavamo naš pristup. Naš uspeh merimo kroz uspeh naših
-              klijenata.
+              Rad sa različitim klijentima – od malih preduzetnika i startupova do etablovanih kompanija – omogućio nam je da razumemo raznolike izazove poslovanja i potrebe tržišta. Svaki projekat bio je prilika da razvijamo rešenja koja nisu samo funkcionalna, već i merljivo doprinose rastu i uspehu klijenata. Upravo ta iskustva iz freelancinga oblikovala su našu filozofiju: da svaki digitalni proizvod, bez obzira na njegovu veličinu, mora biti pažljivo dizajniran, optimizovan i spreman da donese pravu vrednost.
             </p>
             <p>
-              Danas, Zikma Solutions je prepoznat kao jedan od lidera u industriji, poznat po kvalitetu, pouzdanosti i
-              inovativnim rešenjima koja donose merljive rezultate.
+              Ideja da svoje iskustvo pretočimo u firmu nastala je prirodno – želeli smo da klijentima ponudimo stabilnost, kontinuitet i pouzdanost, ali i mogućnost razvoja kompleksnijih i inovativnijih rešenja. Tako je nastala Zikma Solutions, agencija posvećena pružanju profesionalnih web, digitalnih i softverskih rešenja koja kombinuju moderni dizajn, naprednu tehnologiju i strateški pristup.
+            </p>
+            <p>
+              Danas, skoro deset godina nakon prvih freelance koraka, naša misija je jasna: stvarati rešenja koja pomažu kompanijama da rastu, unaprede procese i iskoriste sav potencijal digitalnog sveta. Naša filozofija ostaje ista – radimo pažljivo, sa ciljem da svaki projekat bude primer kvaliteta, inovativnosti i konkretnih rezultata.
+            </p>
+            <p>
+              Put od prvog freelance projekta do firme koja danas oblikuje digitalna iskustva nije bio lak, ali je bio ispunjen učenjem, izazovima i uspehom klijenata. I upravo ta posvećenost i strast nas pokreću da stalno pomeramo granice i kreiramo rešenja koja čine razliku.
             </p>
           </div>
         </div>
