@@ -15,7 +15,7 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
               <img 
-                src="https://customer-assets.emergentagent.com/job_zikma-seo-portal/artifacts/l3nxnhy7_ZS.png" 
+                src="/logo.png" 
                 alt="Zikma Solutions" 
                 className="w-10 h-10 rounded-lg"
               />
