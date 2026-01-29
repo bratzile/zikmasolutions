@@ -83,51 +83,85 @@ const Contact = () => {
           <div className="lg:col-span-2">
             <Card className="bg-[#1a2332]/50 border-[#28A745]/20">
               <CardContent className="p-8">
-                <h2 className="text-2xl font-bold text-white mb-6">Pošaljite nam poruku</h2>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="text-white mb-2 block">Ime i prezime *</label>
-                      <Input
-                        type="text"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                        placeholder="Vaše ime i prezime"
-                        className="bg-[#0f1419] border-[#28A745]/20 text-white placeholder-gray-500 focus:border-[#28A745]"
-                      />
+                {isSuccess ? (
+                  /* Success Message */
+                  <div className="text-center py-12">
+                    <div className="w-20 h-20 bg-[#28A745]/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <CheckCircle className="text-[#28A745]" size={48} />
                     </div>
-                    <div>
-                      <label className="text-white mb-2 block">Email *</label>
-                      <Input
-                        type="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                        placeholder="vas@email.com"
-                        className="bg-[#0f1419] border-[#28A745]/20 text-white placeholder-gray-500 focus:border-[#28A745]"
-                      />
+                    <h2 className="text-2xl font-bold text-white mb-4">Poruka uspešno poslata!</h2>
+                    <p className="text-gray-400 text-lg mb-8 max-w-md mx-auto">
+                      Hvala vam što ste nas kontaktirali. Odgovorićemo vam u najkraćem mogućem roku.
+                    </p>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                      <Button
+                        onClick={() => setIsSuccess(false)}
+                        variant="outline"
+                        className="border-[#28A745] text-[#28A745] hover:bg-[#28A745]/10"
+                      >
+                        Pošalji novu poruku
+                      </Button>
+                      <Link to="/">
+                        <Button className="bg-[#28A745] hover:bg-[#1E7E34] text-white">
+                          Nazad na početnu
+                          <ArrowRight className="ml-2" size={18} />
+                        </Button>
+                      </Link>
                     </div>
                   </div>
+                ) : (
+                  /* Contact Form */
+                  <>
+                    <h2 className="text-2xl font-bold text-white mb-6">Pošaljite nam poruku</h2>
+                    {error && (
+                      <div className="bg-red-500/10 border border-red-500/30 rounded-lg p-4 mb-6">
+                        <p className="text-red-400">{error}</p>
+                      </div>
+                    )}
+                    <form onSubmit={handleSubmit} className="space-y-6">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                          <label className="text-white mb-2 block">Ime i prezime *</label>
+                          <Input
+                            type="text"
+                            name="name"
+                            value={formData.name}
+                            onChange={handleChange}
+                            required
+                            placeholder="Vaše ime i prezime"
+                            className="bg-[#0f1419] border-[#28A745]/20 text-white placeholder-gray-500 focus:border-[#28A745]"
+                          />
+                        </div>
+                        <div>
+                          <label className="text-white mb-2 block">Email *</label>
+                          <Input
+                            type="email"
+                            name="email"
+                            value={formData.email}
+                            onChange={handleChange}
+                            required
+                            placeholder="vas@email.com"
+                            className="bg-[#0f1419] border-[#28A745]/20 text-white placeholder-gray-500 focus:border-[#28A745]"
+                          />
+                        </div>
+                      </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="text-white mb-2 block">Telefon</label>
-                      <Input
-                        type="tel"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        placeholder="069 123 4567"
-                        className="bg-[#0f1419] border-[#28A745]/20 text-white placeholder-gray-500 focus:border-[#28A745]"
-                      />
-                    </div>
-                    <div>
-                      <label className="text-white mb-2 block">Usluga</label>
-                      <select
-                        name="service"
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                          <label className="text-white mb-2 block">Telefon</label>
+                          <Input
+                            type="tel"
+                            name="phone"
+                            value={formData.phone}
+                            onChange={handleChange}
+                            placeholder="069 123 4567"
+                            className="bg-[#0f1419] border-[#28A745]/20 text-white placeholder-gray-500 focus:border-[#28A745]"
+                          />
+                        </div>
+                        <div>
+                          <label className="text-white mb-2 block">Usluga</label>
+                          <select
+                            name="service"
                         value={formData.service}
                         onChange={handleChange}
                         className="w-full px-4 py-2 bg-[#0f1419] border border-[#28A745]/20 text-white rounded-md focus:border-[#28A745] focus:outline-none"
