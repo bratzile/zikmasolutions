@@ -213,7 +213,7 @@ const IzradaWebSajtova = () => {
         <meta property="og:title" content="Izrada Web Sajtova Srbija | Profesionalni Web Development 2025" />
         <meta property="og:description" content="Moderna izrada web sajtova u Srbiji. Responzivni dizajn, SEO optimizacija, brze performanse. Od 500€." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://zikmasolutions.rs/usluge/izrada-web-sajtova" />
+        <meta property="og:url" content="https://zikmasolutions.rs/web-sajtovi/izrada-web-sajta" />
         
         {/* Structured Data */}
         <script type="application/ld+json">
