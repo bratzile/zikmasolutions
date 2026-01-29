@@ -18,6 +18,7 @@ import Contact from "./pages/Contact";
 import About from "./pages/About";
 import IzradaWebSajtova from "./pages/IzradaWebSajtova";
 import RedizajnSajta from "./pages/RedizajnSajta";
+import OdrzavanjeSajta from "./pages/OdrzavanjeSajta";
 
 function App() {
   useEffect(() => {
@@ -40,6 +41,7 @@ function App() {
           {/* Web Sajtovi - SEO Optimized */}
           <Route path="/web-sajtovi/izrada-web-sajta" element={<IzradaWebSajtova />} />
           <Route path="/web-sajtovi/redizajn-sajta" element={<RedizajnSajta />} />
+          <Route path="/web-sajtovi/odrzavanje-sajta" element={<OdrzavanjeSajta />} />
           <Route path="/web-sajtovi/redizajn-sajta" element={<ServicePage />} />
           <Route path="/web-sajtovi/odrzavanje-sajta" element={<ServicePage />} />
           <Route path="/web-sajtovi/izrada-wordpress-sajta" element={<ServicePage />} />
