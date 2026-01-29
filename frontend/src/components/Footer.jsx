@@ -94,7 +94,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
                 <MapPin size={18} className="text-[#28A745] mt-1 flex-shrink-0" />
-                <span className="text-gray-400 text-sm">Beograd, Srbija</span>
+                <span className="text-gray-400 text-sm">Obrenovićeva 10, 18000 Niš</span>
               </li>
               <li className="flex items-start space-x-3">
                 <Phone size={18} className="text-[#28A745] mt-1 flex-shrink-0" />
@@ -102,7 +102,7 @@ const Footer = () => {
               </li>
               <li className="flex items-start space-x-3">
                 <Mail size={18} className="text-[#28A745] mt-1 flex-shrink-0" />
-                <span className="text-gray-400 text-sm">info@zikmasolutions.rs</span>
+                <span className="text-gray-400 text-sm">office@zikmasolutions.rs</span>
               </li>
             </ul>
           </div>
