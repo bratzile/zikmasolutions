@@ -36,6 +36,9 @@ function App() {
           <Route path="/" element={<FinalHome />} />
           <Route path="/usluge" element={<AllServices />} />
           
+          {/* SEO Optimized Page */}
+          <Route path="/usluge/izrada-web-sajtova" element={<IzradaWebSajtova />} />
+          
           {/* Web Sajtovi */}
           <Route path="/web-sajtovi/izrada-web-sajta" element={<ServicePage />} />
           <Route path="/web-sajtovi/redizajn-sajta" element={<ServicePage />} />
