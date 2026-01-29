@@ -105,17 +105,9 @@ function App() {
           <Route path="/seo/tehnicki-seo" element={<TehnickiSEO />} />
           <Route path="/seo/analiza" element={<SEOAnaliza />} />
           
-          {/* Marketing */}
-          <Route path="/marketing/digitalni" element={<ServicePage />} />
-          <Route path="/marketing/google-ads" element={<ServicePage />} />
-          <Route path="/marketing/ppc" element={<ServicePage />} />
-          <Route path="/marketing/social-media" element={<ServicePage />} />
-          <Route path="/marketing/content" element={<ServicePage />} />
-          
-          {/* Dizajn */}
-          <Route path="/dizajn/graficki" element={<ServicePage />} />
-          <Route path="/dizajn/logo" element={<ServicePage />} />
-          <Route path="/dizajn/brend" element={<ServicePage />} />
+          {/* Legal Pages */}
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/terms" element={<TermsOfService />} />
           
           {/* Other pages */}
           <Route path="/portfolio" element={<Portfolio />} />
