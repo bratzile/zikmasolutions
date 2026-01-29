@@ -128,33 +128,6 @@ const About = () => {
           </div>
         </div>
 
-        {/* Team */}
-        <div className="mb-20">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">Upoznajte naš tim</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {team.map((member, index) => (
-              <Card
-                key={index}
-                className="bg-[#1a2332]/50 border-[#28A745]/20 hover:border-[#28A745] transition-all duration-300 overflow-hidden group"
-              >
-                <div className="relative overflow-hidden h-80">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0f1419] via-transparent to-transparent"></div>
-                </div>
-                <CardContent className="p-6 text-center -mt-20 relative z-10">
-                  <h3 className="text-white text-xl font-bold mb-1">{member.name}</h3>
-                  <p className="text-[#28A745] font-medium mb-2">{member.role}</p>
-                  <p className="text-gray-400 text-sm">{member.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-
         {/* CTA */}
         <div className="bg-gradient-to-r from-[#28A745]/10 to-[#1E7E34]/10 border border-[#28A745]/30 rounded-2xl p-12 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
