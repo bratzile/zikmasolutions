@@ -64,7 +64,7 @@ const About = () => {
             Vaš partner za digitalni uspeh
           </h1>
           <p className="text-gray-400 text-xl max-w-3xl mx-auto">
-            Zikma Solutions je digitalna agencija sa sedištem u Beogradu, specijalizovana za kreiranje modernih web rešenja
+            Zikma Solutions je digitalna agencija sa sedištem u Nišu, specijalizovana za kreiranje modernih web rešenja
             koja donose realne rezultate.
           </p>
         </div>
