@@ -75,6 +75,7 @@ function App() {
           <Route path="/razvoj-softvera/saas-resenja" element={<SaaSResenja />} />
           <Route path="/razvoj-softvera/poslovne-aplikacije" element={<PoslovneAplikacije />} />
           <Route path="/razvoj-softvera/automatizacija-procesa" element={<AutomatizacijaProcesa />} />
+          <Route path="/razvoj-softvera/ai-agenti" element={<AIAgenti />} />
           <Route path="/web-sajtovi/redizajn-sajta" element={<ServicePage />} />
           <Route path="/web-sajtovi/odrzavanje-sajta" element={<ServicePage />} />
           <Route path="/web-sajtovi/izrada-wordpress-sajta" element={<ServicePage />} />
