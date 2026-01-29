@@ -244,13 +244,13 @@ const IzradaWebSajtova = () => {
                 <li className="text-gray-600">/</li>
                 <li itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
                   <Link to="/usluge" className="text-gray-400 hover:text-[#28A745]" itemProp="item">
-                    <span itemProp="name">Usluge</span>
+                    <span itemProp="name">Web Sajtovi</span>
                   </Link>
                   <meta itemProp="position" content="2" />
                 </li>
                 <li className="text-gray-600">/</li>
                 <li itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
-                  <span className="text-[#28A745]" itemProp="name">Izrada Web Sajtova</span>
+                  <span className="text-[#28A745]" itemProp="name">Izrada Web Sajta</span>
                   <meta itemProp="position" content="3" />
                 </li>
               </ol>
