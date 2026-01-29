@@ -101,6 +101,30 @@ export const services = [
 
 export const portfolioProjects = [
   {
+    id: 6,
+    title: 'Blue Universe – Prevodilačka Agencija',
+    client: 'Blue Universe',
+    slug: 'blue-universe-prevodilacka-agencija',
+    category: 'WordPress',
+    image: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=800',
+    description: 'Izrada WordPress sajta, SEO optimizacija i kontinuirano održavanje za prevodilačku agenciju Blue Universe.',
+    fullDescription: `Blue Universe je agencija specijalizovana za pismene i usmene prevode, sudsko tumačenje, prevod web sajtova, lekturu i korekturu, kao i prateće jezičke usluge.
+
+Cilj projekta bio je izrada profesionalnog i preglednog sajta koji jasno komunicira usluge, gradi poverenje kod potencijalnih klijenata i omogućava lak kontakt. Poseban akcenat stavljen je na SEO optimizaciju kako bi sajt bio vidljiv na relevantne pretrage u oblasti prevodilačkih usluga.
+
+Projekat obuhvata kompletnu izradu WordPress sajta, optimizaciju sadržaja za pretraživače i kontinuirano tehničko održavanje, čime je obezbeđena stabilnost, sigurnost i dugoročna održivost online prisustva klijenta.`,
+    challenge: 'Klijent je imao potrebu za modernim web sajtom koji će profesionalno predstaviti širok spektar usluga i istovremeno biti optimizovan za pretraživače. Postojala je potreba za boljom strukturom sadržaja, jasnijim CTA elementima i povećanjem organske vidljivosti u konkurentnoj niši.',
+    solution: 'Razvijen je responzivan WordPress sajt sa jasno definisanom strukturom usluga i optimizovanim sadržajem. SEO strategija je obuhvatila optimizaciju ključnih stranica, meta podataka i interne povezanosti. Održavanje sajta uključuje redovna ažuriranja, sigurnosne provere i kontinuiranu optimizaciju kako bi sajt ostao stabilan i relevantan.',
+    technologies: ['WordPress', 'HTML', 'CSS', 'JavaScript'],
+    services: ['Izrada web sajta', 'SEO optimizacija', 'Održavanje sajta'],
+    results: 'Značajno poboljšana organska vidljivost, povećan broj kontakt upita, pouzdan sajt bez zastoja u radu',
+    year: '2024',
+    website: 'https://www.blueuniverse.rs',
+    featured: true,
+    industry: 'Prevodilačke i jezičke usluge',
+    duration: 'Kontinuirana saradnja'
+  },
+  {
     id: 1,
     title: 'Belkom Liftovi - SaaS za upravljanje održavanjem',
     client: 'Belkom Liftovi',
