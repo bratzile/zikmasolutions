@@ -41,6 +41,7 @@ import SEOOptimizacija from "./pages/SEOOptimizacija";
 import LokalniSEO from "./pages/LokalniSEO";
 import TehnickiSEO from "./pages/TehnickiSEO";
 import SEOAnaliza from "./pages/SEOAnaliza";
+import NotFound from "./pages/NotFound";
 
 function App() {
   useEffect(() => {
