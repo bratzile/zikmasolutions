@@ -26,6 +26,7 @@ import IzradaPrestaShopProdavnice from "./pages/IzradaPrestaShopProdavnice";
 import IzradaWooCommerceProdavnice from "./pages/IzradaWooCommerceProdavnice";
 import IzradaCustomProdavnice from "./pages/IzradaCustomProdavnice";
 import PrestaShopDevelopment from "./pages/PrestaShopDevelopment";
+import PrestaShopOdrzavanje from "./pages/PrestaShopOdrzavanje";
 
 function App() {
   useEffect(() => {
@@ -58,6 +59,7 @@ function App() {
           <Route path="/e-commerce/izrada-woocommerce-prodavnice" element={<IzradaWooCommerceProdavnice />} />
           <Route path="/e-commerce/izrada-custom-prodavnice" element={<IzradaCustomProdavnice />} />
           <Route path="/e-commerce/prestashop-development" element={<PrestaShopDevelopment />} />
+          <Route path="/e-commerce/prestashop-odrzavanje" element={<PrestaShopOdrzavanje />} />
           <Route path="/web-sajtovi/redizajn-sajta" element={<ServicePage />} />
           <Route path="/web-sajtovi/odrzavanje-sajta" element={<ServicePage />} />
           <Route path="/web-sajtovi/izrada-wordpress-sajta" element={<ServicePage />} />
