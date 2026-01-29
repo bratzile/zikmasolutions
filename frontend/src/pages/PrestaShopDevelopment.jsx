@@ -403,9 +403,9 @@ const PrestaShopDevelopment = () => {
                     <ArrowRight className="ml-2" size={20} />
                   </Button>
                 </Link>
-                <a href="tel:+381601234567">
+                <a href="tel:+381692331641">
                   <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white/10 px-8 py-6 text-lg rounded-xl font-semibold">
-                    📞 +381 60 123 4567
+                    📞 069 23 31 641
                   </Button>
                 </a>
               </div>

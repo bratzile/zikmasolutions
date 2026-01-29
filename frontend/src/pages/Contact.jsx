@@ -105,7 +105,7 @@ const Contact = () => {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        placeholder="+381 60 123 4567"
+                        placeholder="069 23 31 641"
                         className="bg-[#0f1419] border-[#28A745]/20 text-white placeholder-gray-500 focus:border-[#28A745]"
                       />
                     </div>
@@ -174,7 +174,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-white font-semibold mb-2">Telefon</h3>
-                    <p className="text-gray-400">+381 60 123 4567</p>
+                    <p className="text-gray-400">069 23 31 641</p>
                     <p className="text-gray-400 text-sm mt-1">Pon - Pet, 09:00 - 17:00</p>
                   </div>
                 </div>
