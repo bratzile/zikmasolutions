@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, CheckCircle, ArrowRight } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
 import { Input } from '../components/ui/input';
 import { Textarea } from '../components/ui/textarea';
-import { useToast } from '../hooks/use-toast';
+import { Link } from 'react-router-dom';
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 
@@ -17,7 +17,8 @@ const Contact = () => {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const { toast } = useToast();
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -33,6 +34,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError(null);
 
     try {
       const response = await fetch(`${BACKEND_URL}/api/contact`, {
@@ -44,10 +46,7 @@ const Contact = () => {
       });
 
       if (response.ok) {
-        toast({
-          title: 'Poruka uspešno poslata!',
-          description: 'Kontaktiraćemo vas u najkraćem mogućem roku.',
-        });
+        setIsSuccess(true);
         setFormData({
           name: '',
           email: '',
@@ -58,12 +57,8 @@ const Contact = () => {
       } else {
         throw new Error('Failed to send message');
       }
-    } catch (error) {
-      toast({
-        title: 'Greška prilikom slanja',
-        description: 'Molimo pokušajte ponovo ili nas kontaktirajte telefonom.',
-        variant: 'destructive',
-      });
+    } catch (err) {
+      setError('Došlo je do greške. Molimo pokušajte ponovo ili nas kontaktirajte telefonom.');
     } finally {
       setIsSubmitting(false);
     }
