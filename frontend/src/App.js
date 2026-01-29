@@ -16,6 +16,7 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
+import IzradaWebSajtova from "./pages/IzradaWebSajtova";
 
 function App() {
   useEffect(() => {
