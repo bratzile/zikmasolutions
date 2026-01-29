@@ -17,7 +17,15 @@ const NewHeader = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [megaMenuOpen, setMegaMenuOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState(serviceCategories[0]?.id || '');
+  const [expandedCategories, setExpandedCategories] = useState({});
   const location = useLocation();
+
+  const toggleCategory = (categoryId) => {
+    setExpandedCategories(prev => ({
+      ...prev,
+      [categoryId]: !prev[categoryId]
+    }));
+  };
 
   useEffect(() => {
     const handleScroll = () => {
