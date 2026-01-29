@@ -23,6 +23,7 @@ import IzradaWordPressSajta from "./pages/IzradaWordPressSajta";
 import WordPressDevelopment from "./pages/WordPressDevelopment";
 import WordPressOdrzavanje from "./pages/WordPressOdrzavanje";
 import IzradaPrestaShopProdavnice from "./pages/IzradaPrestaShopProdavnice";
+import IzradaWooCommerceProdavnice from "./pages/IzradaWooCommerceProdavnice";
 
 function App() {
   useEffect(() => {
@@ -52,6 +53,7 @@ function App() {
           
           {/* E-commerce - SEO Optimized */}
           <Route path="/e-commerce/izrada-prestashop-prodavnice" element={<IzradaPrestaShopProdavnice />} />
+          <Route path="/e-commerce/izrada-woocommerce-prodavnice" element={<IzradaWooCommerceProdavnice />} />
           <Route path="/web-sajtovi/redizajn-sajta" element={<ServicePage />} />
           <Route path="/web-sajtovi/odrzavanje-sajta" element={<ServicePage />} />
           <Route path="/web-sajtovi/izrada-wordpress-sajta" element={<ServicePage />} />
