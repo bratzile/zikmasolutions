@@ -210,7 +210,7 @@ const IzradaWebSajtova = () => {
               </div>
 
               {/* H1 - Najvažniji SEO element */}
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight font-poppins" data-aos="fade-up">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight font-montserrat" data-aos="fade-up">
                 Izrada Web Sajtova Srbija<br />
                 <span className="text-[#28A745]">Profesionalni Web Development</span>
               </h1>
@@ -261,7 +261,7 @@ const IzradaWebSajtova = () => {
         <section className="py-20 bg-[#0a0c0f]">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12" data-aos="fade-up">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-poppins">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-montserrat">
                 Šta Dobijate Izradom Web Sajta
               </h2>
               <p className="text-gray-400 text-lg max-w-3xl mx-auto">
@@ -282,7 +282,7 @@ const IzradaWebSajtova = () => {
                     <div className="w-12 h-12 bg-gradient-to-br from-[#28A745] to-[#1E7E34] rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                       {feature.icon}
                     </div>
-                    <CardTitle className="text-white text-lg font-poppins">{feature.title}</CardTitle>
+                    <CardTitle className="text-white text-lg font-montserrat">{feature.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <CardDescription className="text-gray-400">
@@ -299,7 +299,7 @@ const IzradaWebSajtova = () => {
         <section className="py-20 bg-[#0f1419]">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16" data-aos="fade-up">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-poppins">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-montserrat">
                 Zašto Izabrati Zikma Solutions za Izradu Web Sajta
               </h2>
               <p className="text-gray-400 text-lg max-w-3xl mx-auto">
@@ -333,7 +333,7 @@ const IzradaWebSajtova = () => {
         <section className="py-20 bg-[#0a0c0f]">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16" data-aos="fade-up">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-poppins">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-montserrat">
                 Kako Radimo na Izradi Web Sajta
               </h2>
               <p className="text-gray-400 text-lg max-w-3xl mx-auto">
@@ -369,7 +369,7 @@ const IzradaWebSajtova = () => {
         <section className="py-20 bg-[#0f1419]">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12" data-aos="fade-up">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-poppins">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-montserrat">
                 Tehnologije Za Izradu Modernih Web Sajtova
               </h2>
               <p className="text-gray-400 text-lg max-w-3xl mx-auto">
@@ -406,7 +406,7 @@ const IzradaWebSajtova = () => {
         <section className="py-20 bg-[#0a0c0f]">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12" data-aos="fade-up">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-poppins">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-montserrat">
                 Često Postavljana Pitanja o Izradi Web Sajtova
               </h2>
               <p className="text-gray-400 text-lg max-w-3xl mx-auto">
@@ -445,7 +445,7 @@ const IzradaWebSajtova = () => {
 
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl mx-auto text-center" data-aos="fade-up">
-              <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 font-poppins">
+              <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 font-montserrat">
                 Spremni za Novi Web Sajt?
               </h2>
               <p className="text-white/90 text-xl mb-8 leading-relaxed">
