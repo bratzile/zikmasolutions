@@ -261,54 +261,70 @@ const NewHeader = () => {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="lg:hidden fixed inset-0 top-20 bg-[#0f1419]/95 backdrop-blur-md border-t border-[#28A745]/20 animate-in slide-in-from-top duration-300 z-50 overflow-y-auto">
-            <nav className="container mx-auto px-6 py-8">
+            <nav className="container mx-auto px-4 py-6">
               {/* Main Navigation Links */}
-              <div className="grid grid-cols-2 gap-3 mb-8">
+              <div className="flex flex-wrap gap-2 mb-6">
                 {navLinks.filter(link => !link.hasMegaMenu).map((link) => (
                   <Link
                     key={link.path}
                     to={link.path}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className={`flex items-center justify-center py-4 px-4 rounded-xl border transition-all duration-300 ${
+                    className={`py-2 px-4 rounded-lg border text-sm transition-all duration-300 ${
                       location.pathname === link.path 
                         ? 'bg-[#28A745]/20 border-[#28A745] text-[#28A745]' 
-                        : 'bg-[#1a2332]/50 border-[#28A745]/20 text-white hover:border-[#28A745] hover:bg-[#1a2332]'
+                        : 'bg-[#1a2332]/50 border-[#28A745]/20 text-white'
                     }`}
                   >
-                    <span className="font-medium">{link.name}</span>
+                    {link.name}
                   </Link>
                 ))}
               </div>
 
-              {/* Services Section */}
-              <div className="mb-8">
-                <h3 className="text-[#28A745] font-bold text-lg mb-4 flex items-center">
-                  <span className="w-8 h-[2px] bg-[#28A745] mr-3"></span>
-                  Usluge
-                </h3>
-                <div className="grid grid-cols-2 gap-3">
-                  {serviceCategories.map((category) => {
-                    const IconComponent = categoryIconMap[category.icon];
-                    return (
-                      <Link
-                        key={category.id}
-                        to="/usluge"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                        className="flex items-center p-4 rounded-xl bg-[#1a2332]/50 border border-[#28A745]/20 hover:border-[#28A745] transition-all duration-300"
+              {/* Services Accordion */}
+              <div className="space-y-2">
+                <p className="text-[#28A745] font-semibold text-sm mb-3">Usluge</p>
+                {serviceCategories.map((category) => {
+                  const IconComponent = categoryIconMap[category.icon];
+                  const isExpanded = expandedCategories[category.id];
+                  return (
+                    <div key={category.id} className="rounded-xl border border-[#28A745]/20 overflow-hidden">
+                      <button
+                        onClick={() => toggleCategory(category.id)}
+                        className="w-full flex items-center justify-between p-3 bg-[#1a2332]/50 hover:bg-[#1a2332] transition-colors"
                       >
-                        <div className="w-10 h-10 rounded-lg bg-[#28A745]/20 flex items-center justify-center mr-3">
-                          {IconComponent && <IconComponent size={18} className="text-[#28A745]" />}
+                        <div className="flex items-center">
+                          <div className="w-8 h-8 rounded-lg bg-[#28A745]/20 flex items-center justify-center mr-3">
+                            {IconComponent && <IconComponent size={16} className="text-[#28A745]" />}
+                          </div>
+                          <span className="text-white font-medium text-sm">{category.name}</span>
                         </div>
-                        <span className="text-white text-sm font-medium">{category.name}</span>
-                      </Link>
-                    );
-                  })}
-                </div>
+                        <ChevronDown 
+                          size={18} 
+                          className={`text-[#28A745] transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`} 
+                        />
+                      </button>
+                      {isExpanded && (
+                        <div className="bg-[#0a0c0f]/50 p-2 space-y-1">
+                          {category.services.map((service) => (
+                            <Link
+                              key={service.id}
+                              to={service.fullPath}
+                              onClick={() => setIsMobileMenuOpen(false)}
+                              className="block py-2 px-3 text-gray-300 hover:text-[#28A745] hover:bg-[#28A745]/10 rounded-lg transition-colors text-sm"
+                            >
+                              {service.title}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
               </div>
 
               {/* CTA Button */}
-              <Link to="/kontakt" onClick={() => setIsMobileMenuOpen(false)}>
-                <Button className="w-full bg-[#28A745] hover:bg-[#1E7E34] text-white py-6 text-lg font-semibold rounded-xl">
+              <Link to="/kontakt" onClick={() => setIsMobileMenuOpen(false)} className="block mt-6">
+                <Button className="w-full bg-[#28A745] hover:bg-[#1E7E34] text-white py-3 font-semibold rounded-xl">
                   Kontaktirajte nas
                 </Button>
               </Link>
