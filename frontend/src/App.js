@@ -36,11 +36,8 @@ function App() {
           <Route path="/" element={<FinalHome />} />
           <Route path="/usluge" element={<AllServices />} />
           
-          {/* SEO Optimized Page */}
-          <Route path="/usluge/izrada-web-sajtova" element={<IzradaWebSajtova />} />
-          
-          {/* Web Sajtovi */}
-          <Route path="/web-sajtovi/izrada-web-sajta" element={<ServicePage />} />
+          {/* Web Sajtovi - SEO Optimized */}
+          <Route path="/web-sajtovi/izrada-web-sajta" element={<IzradaWebSajtova />} />
           <Route path="/web-sajtovi/redizajn-sajta" element={<ServicePage />} />
           <Route path="/web-sajtovi/odrzavanje-sajta" element={<ServicePage />} />
           <Route path="/web-sajtovi/izrada-wordpress-sajta" element={<ServicePage />} />
