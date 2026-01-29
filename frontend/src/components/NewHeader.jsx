@@ -252,51 +252,55 @@ const NewHeader = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden bg-[#0f1419] border-t border-[#28A745]/20 animate-in slide-in-from-top duration-300 max-h-[80vh] overflow-y-auto">
-            <nav className="container mx-auto px-4 py-6 flex flex-col space-y-4">
-              {navLinks.map((link) => (
-                <div key={link.path}>
-                  {link.hasMegaMenu ? (
-                    <div className="space-y-2">
-                      <button
-                        className="w-full text-left text-white font-medium py-2"
-                        onClick={() => {/* Toggle accordion if needed */}}
+          <div className="lg:hidden fixed inset-0 top-20 bg-[#0f1419]/95 backdrop-blur-md border-t border-[#28A745]/20 animate-in slide-in-from-top duration-300 z-50 overflow-y-auto">
+            <nav className="container mx-auto px-6 py-8">
+              {/* Main Navigation Links */}
+              <div className="grid grid-cols-2 gap-3 mb-8">
+                {navLinks.filter(link => !link.hasMegaMenu).map((link) => (
+                  <Link
+                    key={link.path}
+                    to={link.path}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className={`flex items-center justify-center py-4 px-4 rounded-xl border transition-all duration-300 ${
+                      location.pathname === link.path 
+                        ? 'bg-[#28A745]/20 border-[#28A745] text-[#28A745]' 
+                        : 'bg-[#1a2332]/50 border-[#28A745]/20 text-white hover:border-[#28A745] hover:bg-[#1a2332]'
+                    }`}
+                  >
+                    <span className="font-medium">{link.name}</span>
+                  </Link>
+                ))}
+              </div>
+
+              {/* Services Section */}
+              <div className="mb-8">
+                <h3 className="text-[#28A745] font-bold text-lg mb-4 flex items-center">
+                  <span className="w-8 h-[2px] bg-[#28A745] mr-3"></span>
+                  Usluge
+                </h3>
+                <div className="grid grid-cols-2 gap-3">
+                  {serviceCategories.map((category) => {
+                    const IconComponent = categoryIconMap[category.icon];
+                    return (
+                      <Link
+                        key={category.id}
+                        to="/usluge"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className="flex items-center p-4 rounded-xl bg-[#1a2332]/50 border border-[#28A745]/20 hover:border-[#28A745] transition-all duration-300"
                       >
-                        {link.name}
-                      </button>
-                      <div className="pl-4 space-y-2">
-                        {serviceCategories.map((category) => (
-                          <div key={category.id} className="space-y-1">
-                            <p className="text-[#28A745] text-sm font-semibold">{category.name}</p>
-                            {category.services.map((service) => (
-                              <Link
-                                key={service.id}
-                                to={service.fullPath}
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="block text-gray-300 hover:text-[#28A745] transition-colors text-sm py-1 pl-2"
-                              >
-                                {service.title}
-                              </Link>
-                            ))}
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  ) : (
-                    <Link
-                      to={link.path}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      className={`text-white hover:text-[#28A745] transition-colors py-2 block ${
-                        location.pathname === link.path ? 'text-[#28A745]' : ''
-                      }`}
-                    >
-                      {link.name}
-                    </Link>
-                  )}
+                        <div className="w-10 h-10 rounded-lg bg-[#28A745]/20 flex items-center justify-center mr-3">
+                          {IconComponent && <IconComponent size={18} className="text-[#28A745]" />}
+                        </div>
+                        <span className="text-white text-sm font-medium">{category.name}</span>
+                      </Link>
+                    );
+                  })}
                 </div>
-              ))}
+              </div>
+
+              {/* CTA Button */}
               <Link to="/kontakt" onClick={() => setIsMobileMenuOpen(false)}>
-                <Button className="w-full bg-[#28A745] hover:bg-[#1E7E34] text-white">
+                <Button className="w-full bg-[#28A745] hover:bg-[#1E7E34] text-white py-6 text-lg font-semibold rounded-xl">
                   Kontaktirajte nas
                 </Button>
               </Link>
