@@ -60,6 +60,7 @@ const NewHeader = () => {
       'Settings': Settings,
       'Globe': Globe,
       'ShoppingCart': ShoppingCart,
+      'ShoppingBag': ShoppingBag,
       'Layers': Layers,
       'Smartphone': Smartphone,
       'Cloud': Cloud,
@@ -68,7 +69,10 @@ const NewHeader = () => {
       'MapPin': MapPin,
       'FileSearch': FileSearch,
       'Code': Code,
-      'TrendingUp': TrendingUp
+      'TrendingUp': TrendingUp,
+      'Shield': Shield,
+      'Zap': Zap,
+      'BarChart': BarChart
     };
     return icons[iconName] || Globe;
   };
