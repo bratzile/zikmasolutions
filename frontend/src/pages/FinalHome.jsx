@@ -101,7 +101,7 @@ const FinalHome = () => {
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight font-poppins" data-aos="fade-up">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight font-poppins" data-aos="fade-up">
               Profesionalna izrada{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff6f61] via-[#28A745] to-[#ff6f61]">
                 web i softverskih rešenja
@@ -109,7 +109,7 @@ const FinalHome = () => {
               {' '}za B2B i enterprise klijente
             </h1>
 
-            <p className="text-xl text-gray-300 mb-10 max-w-3xl mx-auto font-inter leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+            <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-8 md:mb-10 max-w-3xl mx-auto font-inter leading-relaxed px-2" data-aos="fade-up" data-aos-delay="100">
               Razvijamo web sajtove, aplikacije, SaaS platforme, AI agente i kompletna digitalna rešenja za rast vašeg poslovanja.
             </p>
 
