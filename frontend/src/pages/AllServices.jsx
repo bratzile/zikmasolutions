@@ -1,12 +1,16 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Globe, ShoppingCart, Code, TrendingUp, Megaphone, Palette } from 'lucide-react';
+import { ArrowRight, Globe, ShoppingCart, Code, TrendingUp, Megaphone, Palette, Monitor, RefreshCw, Layout, Settings, Layers, Smartphone, Cloud, Cpu, Search, MapPin, FileSearch, Shield, ShoppingBag, Zap, BarChart } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
 import { serviceCategories } from '../newMockData';
 import AOS from 'aos';
 
-const iconMap = {
+const categoryIconMap = {
   Globe, ShoppingCart, Code, TrendingUp, Megaphone, Palette
+};
+
+const serviceIconMap = {
+  Monitor, RefreshCw, Layout, Settings, Globe, ShoppingCart, ShoppingBag, Layers, Smartphone, Cloud, Cpu, Search, MapPin, FileSearch, Code, TrendingUp, Shield, Zap, BarChart
 };
 
 const AllServices = () => {
@@ -14,6 +18,10 @@ const AllServices = () => {
     window.scrollTo(0, 0);
     AOS.refresh();
   }, []);
+
+  const getServiceIcon = (iconName) => {
+    return serviceIconMap[iconName] || Globe;
+  };
 
   return (
     <div className="min-h-screen bg-[#0f1419] pt-32 pb-20">
