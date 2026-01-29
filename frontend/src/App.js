@@ -37,6 +37,7 @@ import AIAgenti from "./pages/AIAgenti";
 import SEOOptimizacija from "./pages/SEOOptimizacija";
 import LokalniSEO from "./pages/LokalniSEO";
 import TehnickiSEO from "./pages/TehnickiSEO";
+import SEOAnaliza from "./pages/SEOAnaliza";
 
 function App() {
   useEffect(() => {
