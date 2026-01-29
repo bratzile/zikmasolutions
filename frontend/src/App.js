@@ -86,10 +86,6 @@ function App() {
           <Route path="/e-commerce/prestashop-odrzavanje" element={<ServicePage />} />
           
           {/* Aplikacije */}
-          <Route path="/razvoj-softvera/web-aplikacije" element={<ServicePage />} />
-          <Route path="/razvoj-softvera/mobilne-aplikacije" element={<ServicePage />} />
-          <Route path="/razvoj-softvera/saas-resenja" element={<ServicePage />} />
-          <Route path="/razvoj-softvera/poslovne-aplikacije" element={<ServicePage />} />
           <Route path="/razvoj-softvera/automatizacija-procesa" element={<ServicePage />} />
           <Route path="/razvoj-softvera/ai-agenti" element={<ServicePage />} />
           
