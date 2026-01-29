@@ -236,23 +236,13 @@ export const serviceCategories = [
         featured: false
       },
       {
-        id: 'wordpress-seo',
-        title: 'WordPress SEO',
-        slug: 'wordpress',
-        shortDesc: 'SEO optimizacija WordPress sajtova',
-        fullPath: '/seo/wordpress',
-        icon: 'Layout',
+        id: 'seo-analiza',
+        title: 'SEO Analiza',
+        slug: 'analiza',
+        shortDesc: 'Detaljna analiza sajta i prilike za optimizaciju',
+        fullPath: '/seo/analiza',
+        icon: 'FileSearch',
         color: '#FFC107',
-        featured: false
-      },
-      {
-        id: 'prestashop-seo',
-        title: 'PrestaShop SEO',
-        slug: 'prestashop',
-        shortDesc: 'SEO za PrestaShop prodavnice',
-        fullPath: '/seo/prestashop',
-        icon: 'ShoppingCart',
-        color: '#1E7E34',
         featured: false
       }
     ]
