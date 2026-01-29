@@ -6,6 +6,8 @@ import { Input } from '../components/ui/input';
 import { Textarea } from '../components/ui/textarea';
 import { useToast } from '../hooks/use-toast';
 
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -32,21 +34,39 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Mock form submission
-    setTimeout(() => {
+    try {
+      const response = await fetch(`${BACKEND_URL}/api/contact`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        toast({
+          title: 'Poruka uspešno poslata!',
+          description: 'Kontaktiraćemo vas u najkraćem mogućem roku.',
+        });
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          service: '',
+          message: ''
+        });
+      } else {
+        throw new Error('Failed to send message');
+      }
+    } catch (error) {
       toast({
-        title: 'Poruka uspešno poslata!',
-        description: 'Kontaktiraćemo vas u najkraćem mogućem roku.',
+        title: 'Greška prilikom slanja',
+        description: 'Molimo pokušajte ponovo ili nas kontaktirajte telefonom.',
+        variant: 'destructive',
       });
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        service: '',
-        message: ''
-      });
+    } finally {
       setIsSubmitting(false);
-    }, 1500);
+    }
   };
 
   return (
@@ -105,7 +125,7 @@ const Contact = () => {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        placeholder="069 23 31 641"
+                        placeholder="069 123 4567"
                         className="bg-[#0f1419] border-[#28A745]/20 text-white placeholder-gray-500 focus:border-[#28A745]"
                       />
                     </div>
@@ -123,8 +143,6 @@ const Contact = () => {
                         <option value="ecommerce">WooCommerce/PrestaShop</option>
                         <option value="web-apps">Web Aplikacije</option>
                         <option value="seo">SEO Optimizacija</option>
-                        <option value="marketing">Digitalni Marketing</option>
-                        <option value="design">Grafički Dizajn</option>
                         <option value="hosting">Hosting i Održavanje</option>
                       </select>
                     </div>
@@ -137,7 +155,7 @@ const Contact = () => {
                       value={formData.message}
                       onChange={handleChange}
                       required
-                      placeholder="Opisi svoj projekat ili postavi pitanje..."
+                      placeholder="Opišite svoj projekat ili postavite pitanje..."
                       rows={6}
                       className="bg-[#0f1419] border-[#28A745]/20 text-white placeholder-gray-500 focus:border-[#28A745]"
                     />
@@ -189,8 +207,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-white font-semibold mb-2">Email</h3>
-                    <p className="text-gray-400">info@zikmasolutions.rs</p>
-                    <p className="text-gray-400 text-sm mt-1">Odgovaramo u roku od 24h</p>
+                    <p className="text-gray-400">office@zikmasolutions.rs</p>
                   </div>
                 </div>
               </CardContent>
@@ -204,8 +221,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-white font-semibold mb-2">Lokacija</h3>
-                    <p className="text-gray-400">Beograd, Srbija</p>
-                    <p className="text-gray-400 text-sm mt-1">Radimo remote sa klijentima</p>
+                    <p className="text-gray-400">Obrenovićeva 10</p>
+                    <p className="text-gray-400 text-sm mt-1">18000 Niš, Srbija</p>
                   </div>
                 </div>
               </CardContent>
