@@ -100,8 +100,7 @@ function App() {
           <Route path="/seo/optimizacija" element={<SEOOptimizacija />} />
           <Route path="/seo/lokalni-seo" element={<LokalniSEO />} />
           <Route path="/seo/tehnicki-seo" element={<TehnickiSEO />} />
-          <Route path="/seo/wordpress" element={<ServicePage />} />
-          <Route path="/seo/prestashop" element={<ServicePage />} />
+          <Route path="/seo/analiza" element={<SEOAnaliza />} />
           
           {/* Marketing */}
           <Route path="/marketing/digitalni" element={<ServicePage />} />
