@@ -27,17 +27,6 @@ const NewHeader = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close mega menu when scrolling
-  useEffect(() => {
-    const handleScrollClose = () => {
-      if (megaMenuOpen) {
-        setMegaMenuOpen(false);
-      }
-    };
-    window.addEventListener('scroll', handleScrollClose);
-    return () => window.removeEventListener('scroll', handleScrollClose);
-  }, [megaMenuOpen]);
-
   // Close mega menu on route change
   useEffect(() => {
     setMegaMenuOpen(false);
