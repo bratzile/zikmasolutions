@@ -163,15 +163,21 @@ def send_contact_email(form: ContactForm):
     
     # Send email via SMTP
     smtp_host = os.environ.get('SMTP_HOST', 'smtp.gmail.com')
-    smtp_port = int(os.environ.get('SMTP_PORT', 587))
+    smtp_port = int(os.environ.get('SMTP_PORT', 465))
     smtp_user = os.environ.get('SMTP_USER', '')
     smtp_pass = os.environ.get('SMTP_PASS', '')
     
     if smtp_user and smtp_pass:
-        with smtplib.SMTP(smtp_host, smtp_port) as server:
-            server.starttls()
-            server.login(smtp_user, smtp_pass)
-            server.sendmail(msg['From'], [recipient_email], msg.as_string())
+        # Use SMTP_SSL for port 465 (SSL), SMTP with starttls for port 587
+        if smtp_port == 465:
+            with smtplib.SMTP_SSL(smtp_host, smtp_port) as server:
+                server.login(smtp_user, smtp_pass)
+                server.sendmail(msg['From'], [recipient_email], msg.as_string())
+        else:
+            with smtplib.SMTP(smtp_host, smtp_port) as server:
+                server.starttls()
+                server.login(smtp_user, smtp_pass)
+                server.sendmail(msg['From'], [recipient_email], msg.as_string())
         logger.info(f"Contact email sent successfully to {recipient_email}")
     else:
         logger.warning("SMTP credentials not configured - email not sent")
