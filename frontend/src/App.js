@@ -32,6 +32,7 @@ import WebAplikacije from "./pages/WebAplikacije";
 import MobilneAplikacije from "./pages/MobilneAplikacije";
 import SaaSResenja from "./pages/SaaSResenja";
 import PoslovneAplikacije from "./pages/PoslovneAplikacije";
+import AutomatizacijaProcesa from "./pages/AutomatizacijaProcesa";
 
 function App() {
   useEffect(() => {
