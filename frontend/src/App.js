@@ -30,6 +30,7 @@ import PrestaShopOdrzavanje from "./pages/PrestaShopOdrzavanje";
 import WooCommerceDevelopment from "./pages/WooCommerceDevelopment";
 import WebAplikacije from "./pages/WebAplikacije";
 import MobilneAplikacije from "./pages/MobilneAplikacije";
+import SaaSResenja from "./pages/SaaSResenja";
 
 function App() {
   useEffect(() => {
@@ -68,6 +69,7 @@ function App() {
           {/* Razvoj Softvera - SEO Optimized */}
           <Route path="/razvoj-softvera/web-aplikacije" element={<WebAplikacije />} />
           <Route path="/razvoj-softvera/mobilne-aplikacije" element={<MobilneAplikacije />} />
+          <Route path="/razvoj-softvera/saas-resenja" element={<SaaSResenja />} />
           <Route path="/web-sajtovi/redizajn-sajta" element={<ServicePage />} />
           <Route path="/web-sajtovi/odrzavanje-sajta" element={<ServicePage />} />
           <Route path="/web-sajtovi/izrada-wordpress-sajta" element={<ServicePage />} />
